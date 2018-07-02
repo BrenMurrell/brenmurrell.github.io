@@ -572,7 +572,7 @@ blockquote {
   background-image: url("/img/covers/code.jpg");
   position: relative; }
   .module--summary:after {
-    background-color: rgba(0, 0, 0, 0.8); }
+    background-color: rgba(0, 0, 0, 0.9); }
 
 .module--employment {
   background-image: url("/img/covers/desk.jpg"); }
