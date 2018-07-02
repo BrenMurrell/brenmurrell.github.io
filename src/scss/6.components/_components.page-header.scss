@@ -1,0 +1,9 @@
+.page-header {
+    position: fixed;
+    @include position(auto,0,0,0);
+    background: rgba(0,0,0,0.8);
+    z-index: 10;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}

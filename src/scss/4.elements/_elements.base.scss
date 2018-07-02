@@ -1,0 +1,17 @@
+/**
+ * ELEMENTS.BASE
+ *
+ * @description : Base element styles
+ *
+ */
+
+html,
+body {
+    min-height: 100%;
+    background-color: #d3d3d3;
+    color: #222222;
+    // displays a baseline grid as a background for setting vertical rhythm
+    &.dev_type {
+        @include baseline_grid();
+    }
+}

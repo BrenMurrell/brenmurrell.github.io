@@ -1,0 +1,35 @@
+.c-figure {
+    flex: 1 1 33%;
+    padding: 8px;
+    position: relative;
+    transition: transform 0.4s;
+    transform: rotate3d(0,0,0,1deg);
+    &:before {
+        position: absolute;
+        @include position(0,0,0,0);
+        background-color: white;
+        display: block;
+        content: "";
+        transition: box-shadow 0.4s;
+        box-shadow: 1px 1px 5px rgba(0,0,0,0);
+    }
+    &:hover {
+        transform: rotate3d(0,0,1,1deg);
+        &:before {
+            box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+        }
+    }
+}
+.c-figure__image {
+    width: 100%;
+    position: relative;    
+}
+.c-figure__caption {
+    font-family: $font-cursive;
+    font-weight: 900;
+    padding: 1em 0.5em 0.5em;
+    margin: 0;
+    line-height: 1.4em;
+    display: block;
+    position: relative;        
+}

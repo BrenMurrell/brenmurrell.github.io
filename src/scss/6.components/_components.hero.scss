@@ -1,0 +1,58 @@
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-attachment: fixed;
+    background-position: center center;
+    // background-image: url(../img/covers/coffee.jpg);
+    &:before {
+        background-color: rgba(0,0,0,0.4);
+        position: absolute;
+        @include position(0,0,0,0);
+        display: block;
+        content: "";
+    }
+}
+.hero__content {
+    color: white; //TODO: move to color vars
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+.hero__title, .hero__subtitle {
+    padding: 0;
+    margin: 0;
+    line-height: 1em;
+    font-weight: 900;
+}
+.hero__title {
+    font-size: 2.75rem;
+    @media screen and (min-width: $md) {
+        font-size: 3.75rem;
+    }
+}
+.hero__subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.48em;
+    font-size: 10px;
+    @media screen and (min-width: $md) {
+        letter-spacing: 0.42em;
+        font-size: 14px;
+    }
+}
+.hero__buttons {
+    display: flex;
+    width: 375px;
+    margin: 2em auto 0;
+    
+    .c-btn {
+        flex-basis: 0;
+        flex-grow: 1;
+        margin: 0.5em;
+    }
+
+}

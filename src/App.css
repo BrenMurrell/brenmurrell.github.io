@@ -1,0 +1,625 @@
+/**
+ * APP.SCSS
+ *
+ * @Project     : Bren Murrell 
+ * @Author      : Bren Murrell [bren@moon.co.nz]
+ *
+ */
+@viewport {
+  width: device-width;
+  zoom: 1; }
+
+/**
+ * 1. SETTINGS
+ */
+/**
+ * SETTINGS.BASE
+ *
+ * @description : Key application variables and settings
+ *
+ */
+/**
+ * SETTINGS.BREAKPOINTS
+ *
+ * @description : Define major breakpoints
+ *
+ */
+/**
+    e.g.
+    .thing {
+        background: green;
+
+        @include breakpoint($md){
+            background: blue;
+        }
+    }
+*/
+/**
+ * SETTINGS.COLORS
+ *
+ * @description : Color variable definitions
+ *
+ */
+/**
+ * Main Colours
+ */
+/**
+ * UX/Validation colors
+ */
+/**
+ *  2. TOOLS
+ */
+/**
+ * TOOLS.MIXIN.BASELINE_GRID
+ *
+ * @description :  Adds a baseline grid for setting type.
+ *                 Used in development only.
+ *
+ */
+/**
+ * @param $spacing            Set the desired line height of the grid. Defaults to the base line height
+ */
+/**
+ * TOOLS.MIXIN.POSITION
+ *
+ * @description :  Sets top, right, bottom and left values for an element
+ * @note: Pass 'null' as an argument to ensure that value isn't set
+ *
+ */
+/**
+ * TOOLS.MIXIN.CLEARFIX
+ *
+ * @description : Force an element to self-clear floated children
+ *
+ */
+/**
+ * 3. GENERIC
+ */
+/**
+ * GENERIC.RESET
+ *
+ * @description :  Include your desired reset here.
+ *                 Default is Eric Meyer's reset
+ *
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+ * GENERIC.BOXSIZING
+ *
+ * @description : Sets global box-sizing
+ * @reference   : https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ *
+ */
+html {
+  box-sizing: border-box; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+/**
+ *  4. ELEMENTS
+ *  Basic styles for raw HTML elements
+ *  No classes here
+ */
+/**
+ * ELEMENTS.BASE
+ *
+ * @description : Base element styles
+ *
+ */
+html,
+body {
+  min-height: 100%;
+  background-color: #d3d3d3;
+  color: #222222; }
+  html.dev_type,
+  body.dev_type {
+    background-image: linear-gradient(to bottom, #0ff 0, rgba(255, 255, 255, 0) 1px);
+    background-repeat: repeat-y;
+    background-size: 100% 1.2em; }
+
+/**
+ * ELEMENTS.DISABLED
+ *
+ * @description : Default styles for disabled elements
+ *
+ */
+.disabled,
+*:disabled,
+[disabled] {
+  cursor: default;
+  opacity: 0.5;
+  pointer-events: none; }
+
+/**
+ * ELEMENTS.IMAGES
+ *
+ * @description : Basic image styles
+ *
+ */
+/**
+ *  Set images for responsive sizing
+ */
+img,
+svg {
+  display: block;
+  max-width: 100%; }
+
+/**
+ * ELEMENTS.TYPE
+ *
+ * @description : Basic typographical styles
+ *
+ */
+body {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.2em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  line-height: 1.2em;
+  margin: 0 auto; }
+
+h1 {
+  font-size: rem(60);
+  font-weight: 900; }
+
+h2 {
+  font-size: rem(48);
+  font-weight: 900; }
+
+h3 {
+  font-size: rem(36);
+  font-weight: 900; }
+
+h4 {
+  font-size: rem(30);
+  font-weight: 900; }
+
+h5 {
+  font-size: rem(24); }
+
+h6 {
+  font-size: rem(21); }
+
+p {
+  margin: 0 0 1.2em 0; }
+
+ul {
+  list-style-type: disc; }
+
+ol {
+  list-style-type: decimal; }
+
+li {
+  margin-left: 16px; }
+
+blockquote {
+  margin: 16px 0;
+  border-left: 3px solid #222;
+  padding: 8px 16px; }
+
+/**
+ *  5. OBJECTS
+ *  These are repeating visual/structural patterns with no 'design' added
+ *  Must be built with classes only
+ */
+/**
+ *  6. COMPONENTS
+ *  A component is a reusable chunk of UI that is clearly designed, as opposed to an object.
+ *  Clearly refers to a block of UI: pagination, buttons, modals, icons... etc
+ *  You should be able to take a component and paste it anywhere in the app
+ *  Must be built with classes only
+ */
+/**
+ * COMPONENTS.BUTTONS
+ *
+ * @description : Main buttons
+ *
+ */
+.c-btn {
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.4s ease;
+  border: none;
+  position: relative;
+  font-weight: 600;
+  text-transform: uppercase; }
+  .c-btn:after, .c-btn:before {
+    position: absolute;
+    display: block;
+    background: #ffffff;
+    content: ""; }
+  .c-btn:after {
+    top: auto;
+    right: 100%;
+    bottom: 0;
+    left: 0;
+    transition: right 0.15s calc(0.15s * 3);
+    height: 2px; }
+  .c-btn:before {
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    transition: top 0.15s calc(0.15s * 2);
+    width: 2px; }
+  .c-btn:hover {
+    transition: background-color 0.4s calc(0.15s * 4) ease;
+    border-bottom-width: 100%; }
+    .c-btn:hover:after {
+      transition: right 0.15s;
+      right: 0; }
+    .c-btn:hover:before {
+      transition: top 0.15s 0.15s;
+      top: 0; }
+
+.c-btn__link {
+  padding: 2em;
+  text-decoration: none;
+  color: white;
+  display: block; }
+  .c-btn__link:after, .c-btn__link:before {
+    position: absolute;
+    display: block;
+    background: #ffffff;
+    content: ""; }
+  .c-btn__link:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 100%;
+    height: 2px;
+    transition: left 0.15s 0.15s; }
+  .c-btn__link:before {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 100%;
+    left: 0;
+    width: 2px;
+    transition: bottom 0.15s 0s; }
+  .c-btn:hover .c-btn__link:after {
+    left: 0;
+    transition: left 0.15s calc(0.15s * 2); }
+  .c-btn:hover .c-btn__link:before {
+    bottom: 0;
+    transition: bottom 0.15s calc(0.15s * 3); }
+
+.c-btn--pri {
+  background: rgba(0, 0, 0, 0); }
+  .c-btn--pri:hover {
+    background: rgba(0, 0, 0, 0.4); }
+
+.c-btn--sec {
+  background: rgba(255, 255, 255, 0); }
+  .c-btn--sec:hover {
+    background: rgba(255, 255, 255, 0.4); }
+  .c-btn--sec:after, .c-btn--sec:before {
+    background-color: #000000; }
+  .c-btn--sec .c-btn__link {
+    color: #000000; }
+    .c-btn--sec .c-btn__link:after, .c-btn--sec .c-btn__link:before {
+      background-color: #000000; }
+
+.cards {
+  max-width: 64em;
+  margin: 0 auto; }
+  @media all and (min-width: 48em) {
+    .cards {
+      grid-gap: 16px;
+      display: grid;
+      grid-template-columns: auto auto; } }
+
+.card {
+  margin-bottom: 16px;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  transition: box-shadow 0.4s;
+  border-radius: 4px;
+  color: #222222; }
+  .card:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4); }
+  @media all and (min-width: 48em) {
+    .card {
+      margin-bottom: 0; } }
+
+.card__header {
+  padding: 32px;
+  background: #222222;
+  color: white; }
+
+.card__body {
+  padding: 32px 32px 80px; }
+
+.card__title {
+  font-size: 24px; }
+
+.card__subtitle {
+  font-size: 20px; }
+
+.card__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #aaaaaa;
+  padding: 16px 32px;
+  color: white; }
+
+.card__meta {
+  font-size: 16px;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  line-height: 16px; }
+
+.c-figure {
+  flex: 1 1 33%;
+  padding: 8px;
+  position: relative;
+  transition: transform 0.4s;
+  transform: rotate3d(0, 0, 0, 1deg); }
+  .c-figure:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    display: block;
+    content: "";
+    transition: box-shadow 0.4s;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0); }
+  .c-figure:hover {
+    transform: rotate3d(0, 0, 1, 1deg); }
+    .c-figure:hover:before {
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); }
+
+.c-figure__image {
+  width: 100%;
+  position: relative; }
+
+.c-figure__caption {
+  font-family: "Nothing You Could Do", cursive;
+  font-weight: 900;
+  padding: 1em 0.5em 0.5em;
+  margin: 0;
+  line-height: 1.4em;
+  display: block;
+  position: relative; }
+
+.c-footer {
+  padding-bottom: 80px; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 8px; }
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-attachment: fixed;
+  background-position: center center; }
+  .hero:before {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: ""; }
+
+.hero__content {
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 5; }
+
+.hero__title, .hero__subtitle {
+  padding: 0;
+  margin: 0;
+  line-height: 1em;
+  font-weight: 900; }
+
+.hero__title {
+  font-size: 2.75rem; }
+  @media screen and (min-width: 48em) {
+    .hero__title {
+      font-size: 3.75rem; } }
+
+.hero__subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.48em;
+  font-size: 10px; }
+  @media screen and (min-width: 48em) {
+    .hero__subtitle {
+      letter-spacing: 0.42em;
+      font-size: 14px; } }
+
+.hero__buttons {
+  display: flex;
+  width: 375px;
+  margin: 2em auto 0; }
+  .hero__buttons .c-btn {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 0.5em; }
+
+.logo {
+  padding: rem(16px);
+  color: white; }
+
+.logo__title {
+  font-size: 30px;
+  line-height: 1.4em;
+  font-weight: 900;
+  margin: 0;
+  padding: 0; }
+
+.logo__subtitle {
+  font-size: 9px;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.42em; }
+
+.logo__link {
+  color: white;
+  text-decoration: none; }
+
+.module {
+  width: 100%;
+  margin: 0 auto;
+  background: #d3d3d3;
+  padding: 64px 16px 104px;
+  min-height: 100vh;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative; }
+  .module:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    content: "";
+    z-index: 0; }
+
+.module__title {
+  display: block;
+  margin-bottom: 32px;
+  font-size: 32px;
+  max-width: 48em;
+  text-align: center; }
+
+.module__copy {
+  margin: 0 auto;
+  z-index: 1;
+  line-height: 1.6em;
+  color: white;
+  position: relative; }
+  .module--narrow .module__copy {
+    max-width: 48em; }
+
+.module--hero {
+  padding: 0;
+  max-width: none; }
+
+.module--centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.module--summary {
+  position: relative; }
+  .module--summary:after {
+    background-color: rgba(0, 0, 0, 0.8); }
+
+.module--employment:after {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.nav__item {
+  display: inline-block; }
+
+.page-header {
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  color: white;
+  display: flex;
+  justify-content: space-between; }
+
+/* TEST */
+/**
+ *  7. UTILITIES
+ */
+/**
+ * UTILITIES.LAYOUT
+ *
+ * @description : These classes trump other preceeding styles.
+ *                Userful for quickly applying common adjustments.
+ */
+.u-fr {
+  float: right; }
+
+.u-fl {
+  float: left; }
+
+.u-mb {
+  margin-bottom: 1.25rem; }
+
+/**
+ * UTILITIES.TYPE
+ *
+ * @description : These classes trump other preceeding styles.
+ *                Userful for quickly applying common adjustments.
+ */
+.u-tc {
+  text-align: center; }
+
+.u-tr {
+  text-align: right; }
+
+.u-tl {
+  text-align: left; }

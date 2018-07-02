@@ -1,0 +1,116 @@
+/**
+ * COMPONENTS.BUTTONS
+ *
+ * @description : Main buttons
+ *
+ */
+
+// Base button styles
+
+$col-btn: #ffffff;
+$col-btn-sec: #000000;
+$col-bg-pri: #000000;
+$col-bg-sec: #ffffff;
+$anim-btn-speed: 0.15s;
+
+.c-btn {
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.4s ease;
+    border: none;
+    position: relative;
+    font-weight: 600;
+    text-transform: uppercase;
+    &:after, &:before {
+        position: absolute;
+        display: block;
+        background: $col-btn;
+        content: "";
+    }
+    &:after { //first, bottom
+        @include position(auto,100%,0,0);
+        transition: right #{$anim-btn-speed}  calc(#{$anim-btn-speed} * 3);  
+        height: 2px;      
+    }
+    &:before {
+        @include position(100%,0,0,auto);
+        transition: top #{$anim-btn-speed} calc(#{$anim-btn-speed} * 2);        
+        width: 2px;
+    }
+    &:hover {
+        transition: background-color 0.4s calc(#{$anim-btn-speed} * 4) ease;
+        
+        border-bottom-width: 100%;
+        &:after {
+            transition: right #{$anim-btn-speed}; //first          
+            right: 0;
+        }
+        &:before {
+            transition: top #{$anim-btn-speed} #{$anim-btn-speed};                
+            top: 0;
+        }
+    }
+
+}
+.c-btn__link {
+    padding: 2em;
+    text-decoration: none;
+    color: white;
+    display: block;
+    &:after, &:before {
+        position: absolute;
+        display: block;
+        background: $col-btn;
+        content: "";
+    }
+    &:after {
+        position: absolute;
+        @include position(0, 0, auto, 100%);
+        height: 2px;
+        transition: left #{$anim-btn-speed} #{$anim-btn-speed};
+    }
+    &:before {
+        position: absolute;
+        @include position(0,auto,100%,0);
+        width: 2px;
+        transition: bottom #{$anim-btn-speed} 0s;
+        
+    }
+    .c-btn:hover & {
+        &:after {
+            left: 0;
+            transition: left #{$anim-btn-speed} calc(#{$anim-btn-speed} * 2);
+            
+        }
+        &:before {
+            bottom: 0;
+            transition: bottom #{$anim-btn-speed} calc(#{$anim-btn-speed} * 3);
+            
+        }
+    }
+
+}
+// Primary button
+.c-btn--pri {
+    background: rgba($col-bg-pri, 0);
+    &:hover {
+        background:rgba($col-bg-pri, 0.4);
+    }
+}
+
+// Secondary button
+.c-btn--sec {
+    background: rgba($col-bg-sec, 0);
+    &:hover {
+        background: rgba($col-bg-sec, 0.4);
+    }
+    &:after, &:before {
+        background-color: $col-btn-sec;
+    }
+    .c-btn__link {
+        color: $col-btn-sec;    
+        &:after, &:before {
+            background-color: $col-btn-sec;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+$max-content-width: 1140px;
+
+.module {
+    width: 100%;
+    margin: 0 auto;
+    background: #d3d3d3;
+    padding: 64px 16px 104px;
+    min-height: 100vh;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    &:after {
+        position: absolute;
+        top: 0; left: 0;
+        bottom: 0;
+        right:  0;
+        display: block;
+        content: "";
+        z-index: 0;
+    }
+}
+.module__title {
+    display: block;
+    margin-bottom: 32px;
+    font-size: 32px;
+    max-width: $md;
+    text-align: center;
+}
+.module__copy {
+    margin: 0 auto; 
+    z-index: 1;   
+    line-height: 1.6em;
+    color: white;
+    position: relative;
+    .module--narrow & {
+        max-width: $md;
+        
+    }
+}
+.module--styleguide {
+
+}
+.module--hero {
+    padding: 0;
+    max-width: none;
+}
+.module--centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.module--summary {
+    // background-image: url('../img/covers/code.jpg');
+    position: relative;
+    &:after {
+        background-color: rgba(0,0,0,0.8);   
+    }
+    
+}
+
+.module--employment {
+    // background-image: url('../img/covers/desk.jpg');
+    &:after {
+        background-color: rgba(0,0,0,0.3);   
+    }
+}
