@@ -5,26 +5,26 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header class="page-header">
-          <div class="logo">
-              <a class="logo__link" href="/">
-                  <h1 class="logo__title">Bren Murrell</h1>
-                  <h3 class="logo__subtitle">Full Stack Developer</h3>
+        <header className="page-header">
+          <div className="logo">
+              <a className="logo__link" href="/">
+                  <h1 className="logo__title">Bren Murrell</h1>
+                  <h3 className="logo__subtitle">Full Stack Developer</h3>
               </a>
-          </div>      <ul class="nav nav--main">
+          </div>      <ul className="nav nav--main">
           </ul>
         </header>
-        <div class="module module--hero">
-            <div class="hero"> {/* <!--  style="background-image: url('img/covers/coffee.jpg')"> */}
-                <div class="hero__content">
-                    <h1 class="hero__title">Bren Murrell</h1><h3 class="hero__subtitle">Full Stack Web Developer</h3>
-                    <div class="hero__buttons">
+        <div className="module module--hero">
+            <div className="hero"> {/* <!--  style="background-image: url('img/covers/coffee.jpg')"> */}
+                <div className="hero__content">
+                    <h1 className="hero__title">Bren Murrell</h1><h3 className="hero__subtitle">Full Stack Web Developer</h3>
+                    <div className="hero__buttons">
                         {/* 
-                        <button class="c-btn c-btn--pri">
-                            <a class="c-btn__link" href="portfolio.html">Portfolio</a>
+                        <button className="c-btn c-btn--pri">
+                            <a className="c-btn__link" href="portfolio.html">Portfolio</a>
                         </button> 
-                        <button class="c-btn c-btn--pri">
-                            <a class="c-btn__link" href="styleguide.html">Styleguide</a>
+                        <button className="c-btn c-btn--pri">
+                            <a className="c-btn__link" href="styleguide.html">Styleguide</a>
                         </button> 
                         */ }
                         <h2>Coming soon...</h2>
