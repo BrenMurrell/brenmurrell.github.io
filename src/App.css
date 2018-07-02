@@ -452,7 +452,8 @@ blockquote {
   flex-direction: column;
   justify-content: center;
   background-attachment: fixed;
-  background-position: center center; }
+  background-position: center center;
+  background-image: url(/img/covers/coffee.jpg); }
   .hero:before {
     background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
@@ -568,12 +569,15 @@ blockquote {
   justify-content: center; }
 
 .module--summary {
+  background-image: url("/img/covers/code.jpg");
   position: relative; }
   .module--summary:after {
     background-color: rgba(0, 0, 0, 0.8); }
 
-.module--employment:after {
-  background-color: rgba(0, 0, 0, 0.3); }
+.module--employment {
+  background-image: url("/img/covers/desk.jpg"); }
+  .module--employment:after {
+    background-color: rgba(0, 0, 0, 0.3); }
 
 .nav__item {
   display: inline-block; }

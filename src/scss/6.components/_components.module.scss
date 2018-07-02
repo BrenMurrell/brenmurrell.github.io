@@ -52,7 +52,7 @@ $max-content-width: 1140px;
 }
 
 .module--summary {
-    // background-image: url('../img/covers/code.jpg');
+    background-image: url('/img/covers/code.jpg');
     position: relative;
     &:after {
         background-color: rgba(0,0,0,0.8);   
@@ -61,7 +61,7 @@ $max-content-width: 1140px;
 }
 
 .module--employment {
-    // background-image: url('../img/covers/desk.jpg');
+    background-image: url('/img/covers/desk.jpg');
     &:after {
         background-color: rgba(0,0,0,0.3);   
     }
