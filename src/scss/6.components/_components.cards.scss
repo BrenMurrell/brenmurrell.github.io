@@ -1,17 +1,20 @@
 .cards {
-    //grid-template-columns: auto;
+    grid-template-columns: auto;
     max-width: $lg;
     margin: 0 auto;
+    grid-gap: 16px;
+    display: grid;
+}
+.cards--half {
     @media all and (min-width: $md) {
         grid-gap: 16px;
         display: grid;
         grid-template-columns: auto auto;
-        
     }
 }
 .card {
     margin-bottom: 16px;  
-    background-color: white;
+    background-color: rgba(255,255,255,0.85);
     position: relative;
     overflow: hidden;
     box-shadow: 0px 0px 0px rgba(0,0,0,0.0);

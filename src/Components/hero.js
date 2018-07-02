@@ -13,10 +13,10 @@ class Hero extends Component {
                         <h3 className="hero__subtitle">Full Stack Web Developer</h3>
                         <div className="hero__buttons">
                             <button className="c-btn c-btn--pri">
-                                <Link className="c-btn__link" to={`/about`}>About</Link>
+                                <Link className="c-btn__link" to={`/about`}>About Bren</Link>
                             </button> 
                             <button className="c-btn c-btn--pri">
-                                <Link className="c-btn__link" to={`/employment`}>Employment</Link>
+                                <Link className="c-btn__link" to={`/case-studies`}>Case Studies</Link>
                             </button>
                                 
                             {/* 

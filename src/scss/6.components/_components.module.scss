@@ -59,7 +59,12 @@ $max-content-width: 1140px;
     }
     
 }
-
+.module--case-studies {
+    background-image: url('/img/covers/ribs.jpg');
+    &:after {
+        background-color: rgba(0,0,0,0.3);   
+    }
+}
 .module--employment {
     background-image: url('/img/covers/desk.jpg');
     &:after {

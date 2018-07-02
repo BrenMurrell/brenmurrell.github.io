@@ -9,7 +9,7 @@ class Employment extends Component {
                     <div className="module__copy">
                     <h1 className="module__title">Employment history</h1>
                 
-                    <div className="cards">
+                    <div className="cards cards--half">
                         <div className="card">
                             <header className="card__header">
                                 <h2 className="card__title">NV Interactive</h2>
