@@ -1,10 +1,8 @@
-import { FETCH_PARTS, FETCH_PART } from '../actions/types';
+import {  FETCH_CASE_STUDIES } from '../actions/types';
 
 export default (state = "loading", action) => {
     switch (action.type) {
-        case FETCH_PARTS:
-            return action.payload;
-        case FETCH_PART:
+        case FETCH_CASE_STUDIES:
             return action.payload;
         default:
             return state;

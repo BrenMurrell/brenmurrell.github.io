@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 
@@ -8,13 +7,21 @@ class CaseStudy extends Component {
     
 
     render() {
-        const { build, buildId } = this.props;
+        const { caseStudy } = this.props;
         return(
-            <div className="builds-list__item">
-                <img alt="placeholder" src="https://via.placeholder.com/200x100" />
-                <h3><Link to={`/rc-build-logger/builds/${buildId}`} >{build.title}</Link></h3>
-                <p>{build.class}</p>
+            <div className="card">
+                <header className="card__header">
+                    <h2 className="card__title">{ caseStudy.title }</h2>
+                    <h3 className="card__subtitle">{ caseStudy.role }</h3>
+                </header>
+                <div className="card__body">
+                    <div dangerouslySetInnerHTML={{ __html: caseStudy.copy  }} />
+                </div>
+                <footer className="card__footer">
+                    <h4 className="card__meta">{ caseStudy.company }</h4>
+                </footer>
             </div>
+
         )
     }
 
