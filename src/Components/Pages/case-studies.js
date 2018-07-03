@@ -3,6 +3,8 @@ import * as actions from "../../actions/caseStudyActions";
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
+import MetaTags from 'react-meta-tags';
+
 import CaseStudy  from '../CaseStudy';
 
 class CaseStudies extends Component {
@@ -48,6 +50,12 @@ class CaseStudies extends Component {
                         
                     </div>
                 </div>
+                <MetaTags>
+                    <title>Case Studies | Bren Murrell</title>
+                    <meta name="description" content="Where can I add value for you today? Find out through my case studies." />
+                    <meta property="og:title" content="Case Studies | Bren Murrell" />
+                    <meta property="og:image" content="/img/covers/ribs.jpg" />
+                </MetaTags>
             </section>
         )
     }

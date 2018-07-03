@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
+import MetaTags from 'react-meta-tags';
+
 class Hero extends Component {
 
     render() {
@@ -28,6 +30,13 @@ class Hero extends Component {
                         </div>
                     </div>
                 </div>
+                <MetaTags>
+                    <title>Bren Murrell | Full Stack Developer</title>
+                    <meta name="description" content="Full stack nerd, React lover, user evangelist, coffee addict, gadget geek." />
+                    <meta property="og:title" content="Bren Murrell | Full Stack Developer" />
+                    <meta property="og:image" content="/img/covers/coffee.jpg" />
+                </MetaTags>
+            
             </div>
         )
     }

@@ -5880,6 +5880,13 @@ react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
 
+react-meta-tags@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/react-meta-tags/-/react-meta-tags-0.4.1.tgz#bbb2bc7a5b8b7faa73569b742517f9075d692db6"
+  dependencies:
+    babel-runtime "^6.26.0"
+    prop-types "^15.6.0"
+
 react-redux@^5.0.7:
   version "5.0.7"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.7.tgz#0dc1076d9afb4670f993ffaef44b8f8c1155a4c8"

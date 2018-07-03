@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
+import MetaTags from 'react-meta-tags';
+
 class Employment extends Component {
     
     render() {
 
         return (
             <section className="module module--employment">
-                    <div className="module__copy">
+                <div className="module__copy">
                     <h1 className="module__title">Employment history</h1>
                 
                     <div className="cards cards--half">
@@ -127,9 +129,15 @@ class Employment extends Component {
                         </div>  
                     </div>
                 </div>
-                </section>
-            )
-        }
+                <MetaTags>
+                    <title>Employment History | Bren Murrell</title>
+                    <meta name="description" content="A canonical listing of all of my current and previous employers / responsibilities" />
+                    <meta property="og:title" content="Employment History | Bren Murrell" />
+                    <meta property="og:image" content="/img/covers/desk.jpg" />
+                </MetaTags>
+            </section>
+        )
     }
+}
 
-    export default Employment;
+export default Employment;
