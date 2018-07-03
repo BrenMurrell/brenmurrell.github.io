@@ -498,11 +498,13 @@ blockquote {
 .hero__buttons {
   display: flex;
   width: 375px;
-  margin: 2em auto 0; }
+  margin: 2em auto 0;
+  justify-content: center; }
   .hero__buttons .c-btn {
     flex-basis: 0;
     flex-grow: 1;
-    margin: 0.5em; }
+    margin: 0.5em;
+    max-width: 164px; }
 
 .logo {
   padding: rem(16px);
