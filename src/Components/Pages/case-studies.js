@@ -1,12 +1,43 @@
 import React, { Component } from 'react';
+import * as actions from "../../actions/buildActions";
+import { connect } from 'react-redux';
+import _ from 'lodash';
+
+import CaseStudy  from '../CaseStudy';
 
 class CaseStudies extends Component {
-    
+    constructor(props) {
+        super();
+        this.state = {
+            buildTitle: '', buildClass: ''
+        };
+        //this.handleChange = this.handleChange.bind(this);
+    }
+
+    renderBuilds() {
+        const { builds } = this.props;
+        const buildsList = _.map(builds, (value, key) => {
+            return <CaseStudy key={key} buildId={key} build={value}/>
+
+        });
+        if(!_.isEmpty(buildsList)) {
+            return buildsList;
+        }
+        return (
+            <div>No builds found</div>
+        )
+
+        
+    }
+    componentWillMount() {
+        this.props.fetchBuilds();
+    }
     render() {
 
         return (
             <section className="module module--case-studies">
                 <div className="module__copy">
+                    {this.renderBuilds() }
                     <h1 className="module__title">Case Studies</h1>
                     <div className="cards">
                         <div className="card">
@@ -90,4 +121,10 @@ class CaseStudies extends Component {
     }
 }
 
-export default CaseStudies;
+const mapStateToProps = ({builds}) => {
+    return {
+        builds
+    };
+};
+
+export default connect(mapStateToProps, actions)(CaseStudies);

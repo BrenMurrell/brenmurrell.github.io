@@ -1,0 +1,8 @@
+export const FETCH_BUILDS = 'FETCH_BUILDS';
+export const FETCH_BUILD = 'FETCH_BUILD';
+
+export const FETCH_PARTS = 'FETCH_PARTS';
+export const FETCH_PART = 'FETCH_PART';
+
+export const FETCH_BUILD_PARTS = 'FETCH_BUILD_PARTS';
+export const FETCH_BUILD_PART = 'FETCH_BUILD_PART';
