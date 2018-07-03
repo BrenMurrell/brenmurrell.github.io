@@ -268,8 +268,7 @@ blockquote {
   position: relative;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
-  font-size: 16px; }
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif; }
   .c-btn:after, .c-btn:before {
     position: absolute;
     display: block;
@@ -508,7 +507,8 @@ blockquote {
       display: flex; }
       .hero__buttons .c-btn {
         flex-basis: 0;
-        flex-grow: 1; } }
+        flex-grow: 1;
+        font-size: 16px; } }
 
 .logo {
   padding: rem(16px);
