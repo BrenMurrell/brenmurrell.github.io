@@ -1,0 +1,1 @@
+export const FETCH_CASE_STUDIES = 'FETCH_CASE_STUDIES';
