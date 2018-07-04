@@ -367,12 +367,18 @@ blockquote {
   box-shadow: 0px 0px 0px transparent;
   transition: box-shadow 0.4s;
   border-radius: 4px;
-  color: #222222; }
+  color: #222222;
+  opacity: 0;
+  transform: translate3d(0, 60px, 0);
+  transition: opacity 0.4s, transform 0.8s; }
   .card:hover {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4); }
   @media all and (min-width: 48em) {
     .card {
       margin-bottom: 0; } }
+  .card.card--loaded {
+    transform: translate3d(0, 0px, 0);
+    opacity: 1; }
 
 .card__header {
   padding: 32px;

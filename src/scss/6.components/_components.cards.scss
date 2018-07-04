@@ -26,7 +26,14 @@
     }
     @media all and (min-width: $md) {
         margin-bottom: 0;
-    }    
+    }   
+    opacity: 0;
+    transform: translate3d(0,60px,0);
+    transition: opacity 0.4s, transform 0.8s; 
+    &.card--loaded {
+        transform: translate3d(0,0px,0);
+        opacity: 1;
+    }
 }
 
 .card__header {
