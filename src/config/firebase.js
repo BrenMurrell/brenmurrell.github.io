@@ -5,7 +5,7 @@ firebase.initializeApp(FirebaseConfig);
 
 const databaseRef = firebase.database().ref();
 
-export const buildsRef = databaseRef.child("case-studies");
+
 export const caseStudiesRef = databaseRef.child("case-studies");
 
 //export const buildPartsRef = databaseRef.child("buildParts");
