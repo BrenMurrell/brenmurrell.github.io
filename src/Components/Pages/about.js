@@ -23,8 +23,6 @@ class About extends Component {
                 <MetaTags>
                     <title>About Bren | Bren Murrell</title>
                     <meta name="description" content="I am an accomplished IT practitioner with over 15 years experience working in web development, IT support and database development &amp; management." />
-                    <meta property="og:title" content="About Bren | Bren Murrell" />
-                    <meta property="og:image" content="https://brenmurrell.github.io/img/covers/code.jpg" />
                 </MetaTags>
             </section> 
         )

@@ -58,11 +58,10 @@ class CaseStudies extends Component {
                         {this.rendercaseStudies() }
                     </div>
                 </div>
+                
                 <MetaTags>
                     <title>Case Studies | Bren Murrell</title>
                     <meta name="description" content="Where can I add value for you today? Find out through my case studies." />
-                    <meta property="og:title" content="Case Studies | Bren Murrell" />
-                    <meta property="og:image" content="https://brenmurrell.github.io/img/covers/ribs.jpg" />
                 </MetaTags>
             </section>
         )
