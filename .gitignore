@@ -20,6 +20,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# keys
 /src/config/dev.js
 /src/config/prod.js
+
+# IDE stuff
 /.vscode
+
+# sass maps
+**/.sass-cache/
+src/*.css.map
