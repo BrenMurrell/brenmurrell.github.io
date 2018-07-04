@@ -8,7 +8,6 @@
 @viewport {
   width: device-width;
   zoom: 1; }
-
 /**
  * 1. SETTINGS
  */
@@ -332,7 +331,7 @@ blockquote {
     transition: bottom 0.15s calc(0.15s * 3); }
 
 .c-btn--pri {
-  background: rgba(0, 0, 0, 0); }
+  background: transparent; }
   .c-btn--pri:hover {
     background: rgba(0, 0, 0, 0.4); }
 
@@ -365,7 +364,7 @@ blockquote {
   background-color: rgba(255, 255, 255, 0.85);
   position: relative;
   overflow: hidden;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px transparent;
   transition: box-shadow 0.4s;
   border-radius: 4px;
   color: #222222; }
@@ -421,7 +420,7 @@ blockquote {
     display: block;
     content: "";
     transition: box-shadow 0.4s;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0); }
+    box-shadow: 1px 1px 5px transparent; }
   .c-figure:hover {
     transform: rotate3d(0, 0, 1, 1deg); }
     .c-figure:hover:before {
@@ -479,15 +478,22 @@ blockquote {
   padding: 0;
   margin: 0;
   line-height: 1em;
-  font-weight: 900; }
+  font-weight: 900;
+  opacity: 0;
+  transform: translate3d(0, 60px, 0);
+  transition: all 1s 0s; }
 
 .hero__title {
   font-size: 2.75rem; }
   @media screen and (min-width: 48em) {
     .hero__title {
       font-size: 3.75rem; } }
+  .module--loaded .hero__title {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); }
 
 .hero__subtitle {
+  transition-delay: 0.4s;
   text-transform: uppercase;
   letter-spacing: 0.48em;
   font-size: 10px; }
@@ -495,10 +501,16 @@ blockquote {
     .hero__subtitle {
       letter-spacing: 0.42em;
       font-size: 14px; } }
+  .module--loaded .hero__subtitle {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); }
 
 .hero__buttons {
   margin: 2em auto 0;
-  justify-content: center; }
+  justify-content: center;
+  opacity: 0;
+  transform: translate3d(0, 60px, 0);
+  transition: all 1s 0.8s; }
   .hero__buttons .c-btn {
     margin: 0.5em;
     max-width: 200px; }
@@ -509,6 +521,9 @@ blockquote {
         flex-basis: 0;
         flex-grow: 1;
         font-size: 16px; } }
+  .module--loaded .hero__buttons {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); }
 
 .logo {
   padding: rem(16px);
@@ -643,3 +658,5 @@ blockquote {
 
 .u-tl {
   text-align: left; }
+
+/*# sourceMappingURL=App.css.map */
