@@ -63,11 +63,6 @@ class CaseStudies extends Component {
                     <meta name="description" content="Where can I add value for you today? Find out through my case studies." />
                     <meta property="og:title" content="Case Studies | Bren Murrell" />
                     <meta property="og:image" content="https://brenmurrell.github.io/img/covers/ribs.jpg" />
-                    <meta name="twitter:card" content="summary" />
-                    <meta name="twitter:site" content="@brenmurrell" />
-                    <meta name="twitter:title" content="Case Studies | Bren Murrell" />
-                    <meta name="twitter:description" content="Where can I add value for you today? Find out through my case studies." />
-                    <meta name="twitter:image" content="https://brenmurrell.github.io/img/covers/ribs.jpg" />
                 </MetaTags>
             </section>
         )

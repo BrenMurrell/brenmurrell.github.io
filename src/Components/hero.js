@@ -43,14 +43,9 @@ class Hero extends Component {
                 </div>
                 <MetaTags>
                     <title>Bren Murrell | Full Stack Developer</title>
-                    <meta name="description" content="Full stack nerd, React lover, user evangelist, coffee addict, gadget geek." />
+                    <meta name="description" content="Full stack nerd, React lover, user activist, coffee addict, gadget geek." />
                     <meta property="og:title" content="Bren Murrell | Full Stack Developer" />
                     <meta property="og:image" content="https://brenmurrell.github.io/img/covers/coffee.jpg" />
-                    <meta name="twitter:card" content="summary" />
-                    <meta name="twitter:site" content="@brenmurrell" />
-                    <meta name="twitter:title" content="Bren Murrell | Full Stack Developer" />
-                    <meta name="twitter:description" content="Full stack nerd, React lover, user evangelist, coffee addict, gadget geek." />
-                    <meta name="twitter:image" content="https://brenmurrell.github.io/img/covers/coffee.jpg" />
                 </MetaTags>
             
             </div>

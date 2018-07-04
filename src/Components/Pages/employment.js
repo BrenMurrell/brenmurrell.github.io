@@ -133,7 +133,7 @@ class Employment extends Component {
                     <title>Employment History | Bren Murrell</title>
                     <meta name="description" content="A canonical listing of all of my current and previous employers / responsibilities" />
                     <meta property="og:title" content="Employment History | Bren Murrell" />
-                    <meta property="og:image" content="/img/covers/desk.jpg" />
+                    <meta property="og:image" content="https://brenmurrell.github.io/img/covers/desk.jpg" />
                 </MetaTags>
             </section>
         )
