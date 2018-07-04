@@ -151,13 +151,18 @@ html {
 html,
 body {
   min-height: 100%;
-  background-color: #d3d3d3;
+  background-color: #000000;
   color: #222222; }
   html.dev_type,
   body.dev_type {
     background-image: linear-gradient(to bottom, #0ff 0, rgba(255, 255, 255, 0) 1px);
     background-repeat: repeat-y;
     background-size: 100% 1.2em; }
+
+body {
+  opacity: 0; }
+  .wf-active body {
+    opacity: 1; }
 
 /**
  * ELEMENTS.DISABLED

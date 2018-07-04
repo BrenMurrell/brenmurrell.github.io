@@ -8,10 +8,17 @@
 html,
 body {
     min-height: 100%;
-    background-color: #d3d3d3;
+    background-color: #000000;
     color: #222222;
     // displays a baseline grid as a background for setting vertical rhythm
     &.dev_type {
         @include baseline_grid();
+    }
+    
+}
+body {
+    opacity: 0;
+    .wf-active & {
+        opacity: 1;
     }
 }
