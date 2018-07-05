@@ -406,6 +406,12 @@ blockquote {
   color: white;
   text-transform: uppercase;
   text-decoration: none; }
+  .card__header-link .fa-link {
+    transition: transform 0s;
+    transition-timing-function: ease-in-out; }
+    .card__header-visit:hover .card__header-link .fa-link {
+      transform: rotate3d(0, 0, 1, 360deg);
+      transition: transform 1.2s; }
 
 .card__body {
   padding: 32px 32px 80px; }
