@@ -40,8 +40,23 @@
     padding: 32px;    
     background: #222222;
     color: white;
+    display: grid;
+    @media screen and (min-width: $md) {
+        grid-template-columns: auto 55px;
+    }
 }
-
+.card__header-visit {
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card__header-link {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
 .card__body {
     padding: 32px 32px 80px;
     

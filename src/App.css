@@ -8,6 +8,7 @@
 @viewport {
   width: device-width;
   zoom: 1; }
+
 /**
  * 1. SETTINGS
  */
@@ -336,7 +337,7 @@ blockquote {
     transition: bottom 0.15s calc(0.15s * 3); }
 
 .c-btn--pri {
-  background: transparent; }
+  background: rgba(0, 0, 0, 0); }
   .c-btn--pri:hover {
     background: rgba(0, 0, 0, 0.4); }
 
@@ -369,7 +370,7 @@ blockquote {
   background-color: rgba(255, 255, 255, 0.85);
   position: relative;
   overflow: hidden;
-  box-shadow: 0px 0px 0px transparent;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
   transition: box-shadow 0.4s;
   border-radius: 4px;
   color: #222222;
@@ -388,7 +389,23 @@ blockquote {
 .card__header {
   padding: 32px;
   background: #222222;
-  color: white; }
+  color: white;
+  display: grid; }
+  @media screen and (min-width: 48em) {
+    .card__header {
+      grid-template-columns: auto 55px; } }
+
+.card__header-visit {
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.card__header-link {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none; }
 
 .card__body {
   padding: 32px 32px 80px; }
@@ -431,7 +448,7 @@ blockquote {
     display: block;
     content: "";
     transition: box-shadow 0.4s;
-    box-shadow: 1px 1px 5px transparent; }
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0); }
   .c-figure:hover {
     transform: rotate3d(0, 0, 1, 1deg); }
     .c-figure:hover:before {
@@ -675,5 +692,3 @@ blockquote {
 
 .u-tl {
   text-align: left; }
-
-/*# sourceMappingURL=App.css.map */
