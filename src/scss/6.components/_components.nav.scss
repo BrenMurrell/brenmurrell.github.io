@@ -3,7 +3,19 @@
     right: 0;
     top: 0;
     bottom: 0;
+    display: none;
+    @media screen and (min-width: $md) {
+        display: block;
+    }
 }
 .nav__item {
     display: inline-block;
+    line-height: 61px;
+    margin-right: 1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.nav__item--active {
+    text-decoration: underline;
 }

@@ -14,8 +14,10 @@ class Employment extends Component {
                     <div className="cards cards--half">
                         <div className="card card--loaded">
                             <header className="card__header">
-                                <h2 className="card__title">NV Interactive</h2>
-                                <h3 className="card__subtitle">Front End Developer</h3>
+                                <div className="card__header-content">
+                                    <h2 className="card__title">NV Interactive</h2>
+                                    <h3 className="card__subtitle">Front End Developer</h3>
+                                </div>
                             </header>
                             <div className="card__body">
                                 <ul>
@@ -34,8 +36,10 @@ class Employment extends Component {
                         </div>
                         <div className="card card--loaded">
                             <header className="card__header">
-                                <h2 className="card__title">Mogul Limited</h2>
-                                <h3 className="card__subtitle">Web Developer</h3>
+                                <div className="card__header-content">
+                                    <h2 className="card__title">Mogul Limited</h2>
+                                    <h3 className="card__subtitle">Web Developer</h3>
+                                </div>
                             </header>
                             <div className="card__body">
                                 <ul>
@@ -54,8 +58,10 @@ class Employment extends Component {
                         </div>
                         <div className="card card--loaded">
                             <header className="card__header">
-                                <h2 className="card__title">Farmlands Trading Society Ltd.</h2>
-                                <h3 className="card__subtitle">IT Systems Coordinator</h3>
+                                <div className="card__header-content">
+                                    <h2 className="card__title">Farmlands Trading Society Ltd.</h2>
+                                    <h3 className="card__subtitle">IT Systems Coordinator</h3>
+                                </div>
                             </header>
                             <div className="card__body">
                                 <ul>
@@ -71,8 +77,10 @@ class Employment extends Component {
                         </div>
                         <div className="card card--loaded">
                             <header className="card__header">
-                                <h2 className="card__title">Smart Power Wellington</h2>
-                                <h3 className="card__subtitle">Database Developer</h3> 
+                                <div className="card__header-content">
+                                    <h2 className="card__title">Smart Power Wellington</h2>
+                                    <h3 className="card__subtitle">Database Developer</h3> 
+                                </div>
                             </header>
                             <div className="card__body">
                                 <ul>
@@ -87,10 +95,13 @@ class Employment extends Component {
                                 <h4 className="card__meta">May 2006 – Dec 2007</h4>
                             </footer>
                         </div>
+                        
                         <div className="card card--loaded">
                             <header className="card__header">
-                                <h2 className="card__title">Desktop Imaging Ltd.</h2>
-                                <h3 className="card__subtitle">Digital Scanning Team Leader</h3> 
+                                <div className="card__header-content"> 
+                                    <h2 className="card__title">Desktop Imaging Ltd.</h2>
+                                    <h3 className="card__subtitle">Digital Scanning Team Leader</h3> 
+                                </div>
                             </header>
                             <div className="card__body">
                                 <ul>
@@ -109,8 +120,10 @@ class Employment extends Component {
                         </div>
                         <div className="card card--loaded">
                             <header className="card__header">
-                                <h2 className="card__title">Access Management Ltd.</h2>
-                                <h3 className="card__subtitle">IT Administrator</h3> 
+                                <div className="card__header-content">
+                                    <h2 className="card__title">Access Management Ltd.</h2>
+                                    <h3 className="card__subtitle">IT Administrator</h3> 
+                                </div>
                             </header>
                             <div className="card__body">
                                 <ul>

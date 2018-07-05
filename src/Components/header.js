@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import { Link, NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-
+import Navigation from './Generic/navigation';
 
 class Header extends Component {
     render() {
@@ -13,13 +13,7 @@ class Header extends Component {
                         <h3 className="logo__subtitle">Full Stack Developer</h3>
                     </Link>
                 </div>
-                {/* 
-                <nav className="nav nav--main">
-                    <NavLink exact to="/" activeStyle={{color: "white"}} activeClassName="test">Home</NavLink>
-                    <NavLink to="/about" activeStyle={{color: "white"}} activeClassName="test">About</NavLink>
-                    <NavLink to="/case-studies" activeStyle={{color: "white"}} activeClassName="test">Case Studies</NavLink>
-                </nav>
-                */ }
+                <Navigation />
             </header>
         )
     }

@@ -647,10 +647,22 @@ blockquote {
   position: absolute;
   right: 0;
   top: 0;
-  bottom: 0; }
+  bottom: 0;
+  display: none; }
+  @media screen and (min-width: 48em) {
+    .nav--main {
+      display: block; } }
 
 .nav__item {
-  display: inline-block; }
+  display: inline-block;
+  line-height: 61px;
+  margin-right: 1em;
+  color: white;
+  text-decoration: none;
+  font-weight: 600; }
+
+.nav__item--active {
+  text-decoration: underline; }
 
 .page-header {
   position: fixed;
