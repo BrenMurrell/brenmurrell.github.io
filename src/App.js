@@ -9,6 +9,7 @@ import Employment from './Components/Pages/employment';
 import Error404 from './Components/Pages/404';
 import Header from './Components/header';
 import Hero from './Components/hero';
+import Dashboard from './Components/Admin/dashboard';
 
 class App extends Component {
   render() {
@@ -21,7 +22,7 @@ class App extends Component {
                     <Route exact path='/about' component={About} />
                     <Route exact path='/employment' component={Employment} />
                     <Route exact path='/case-studies' component={CaseStudies} />
-                    
+                    <Route exact path='/admin' component={Dashboard} />
                     <Route component={Error404} />
                 </Switch>
                 
