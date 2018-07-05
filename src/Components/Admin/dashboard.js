@@ -4,7 +4,9 @@ class Dashboard extends Component {
 
     render() {
         return(
-            <h1>Admin Dashboard</h1>
+            <div className="module">
+                <h1>Admin Dashboard</h1>
+            </div>
         )
     }
 }

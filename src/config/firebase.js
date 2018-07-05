@@ -11,4 +11,6 @@ export const caseStudiesRef = databaseRef.child("case-studies").orderByChild('or
 //export const buildPartsRef = databaseRef.child("buildParts");
 //export const partsRef = databaseRef.child("parts");
 
+export const authRef = firebase.auth();
 export const provider = new firebase.auth.GoogleAuthProvider();
+
