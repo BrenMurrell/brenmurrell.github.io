@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { Transition } from 'react-transition-group';
 
 import MetaTags from 'react-meta-tags';
 
