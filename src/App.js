@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 //import { CSSTransitionGroup } from 'react-transition-group'; // ES6
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link, NavLink } from 'react-router-dom';
 
 import About from './Components/Pages/about';
 import CaseStudies from './Components/Pages/case-studies';
@@ -16,6 +16,8 @@ class App extends Component {
         <BrowserRouter>
             <div className="App">
                 <Header />
+                
+                
                 <Switch >
                     <Route exact path='/' component={Hero} />
                     <Route exact path='/about' component={About} />

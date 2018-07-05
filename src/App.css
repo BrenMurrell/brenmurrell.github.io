@@ -620,6 +620,12 @@ blockquote {
   .module--employment:after {
     background-color: rgba(0, 0, 0, 0.3); }
 
+.nav--main {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+
 .nav__item {
   display: inline-block; }
 

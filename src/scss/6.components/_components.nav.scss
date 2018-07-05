@@ -1,5 +1,8 @@
-.nav {
-
+.nav--main {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 .nav__item {
     display: inline-block;

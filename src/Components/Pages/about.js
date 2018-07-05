@@ -10,8 +10,8 @@ class About extends Component {
         return (
             <section className="module module--summary module--alt module--centered module--narrow">
                 <div className="module__copy">
-                    <h1 className="module__title">Summary</h1>
-                    <p>I am an accomplished  IT practitioner with over 15 years of experience working in web 
+                    <h1 className="module__title">About me</h1>
+                    <p>Hi! I'm Bren Murrell. I am an accomplished  IT practitioner with over 15 years of experience working in web 
                         development, IT support and database development &amp; management. I have considerable 
                         experience building clean, responsive web solutions; from content management 
                         interfaces through to end user web pages for a wide range of clients. I am passionate 
