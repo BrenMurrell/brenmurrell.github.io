@@ -16,8 +16,6 @@ class App extends Component {
         <BrowserRouter>
             <div className="App">
                 <Header />
-                
-                
                 <Switch >
                     <Route exact path='/' component={Hero} />
                     <Route exact path='/about' component={About} />
