@@ -1,4 +1,4 @@
-import { todosRef, authRef, provider } from "../config/firebase";
+import { authRef, provider } from "../config/firebase";
 import { FETCH_USER } from "./types";
 
 export const fetchUser = () => dispatch => {
