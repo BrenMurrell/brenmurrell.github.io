@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
+
 export default function(ComposedComponent) {
   class Authentication extends Component {
     static contextTypes = {
@@ -22,7 +23,7 @@ export default function(ComposedComponent) {
 
     render() {
       if (this.props.authenticated) {
-        return <ComposedComponent {...this.props} />;
+        return <ComposedComponent {...this.props} />;          
       }
       return null;
     }

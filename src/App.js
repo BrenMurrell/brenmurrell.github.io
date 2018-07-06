@@ -32,8 +32,10 @@ class App extends Component {
                         <Route exact path='/about' component={About} />
                         <Route exact path='/employment' component={Employment} />
                         <Route exact path='/case-studies' component={CaseStudies} />
-                        <Route exact path='/admin' component={requireAuth(Dashboard)} />
-                        <Route path='/admin/sign-in' component={SignIn} />
+                        <Route exact path='/admin/sign-in' component={SignIn} />
+                        <Route path='/admin' component={requireAuth(Dashboard)} />
+                        
+                        
                         
                         <Route component={Error404} />
                     </Switch>
