@@ -1,0 +1,27 @@
+{
+  "case-studies" : {
+    "footrot-flats" : {
+      "company" : "NV Interactive",
+      "copy" : "<p>In 2016, NV Interactive were contacted with a very important mission:  to bring Murray Ball’s iconic Footrot Flats characters into the digital age and present them to a whole new generation of potential fans. The completed product won a Bronze Award in the Small Scale Website category of the 2017 Best Awards.</p><p>I was the lead front end developer for this project. I utilised my extensive  experience in CSS animation to breathe a digital life into my beloved childhood favourites. I also assisted the junior developer in building the Umbraco CMS administrative interfaces.</p><ul><li>Front end build including custom CSS animations that closely reflect the feel of Footrot Flats.</li><li>CMS / Social media sharing integration, designing &amp; building CMS interfaces which gave the client complete control of how their content looks when shared on social media platforms (now a standard part of all of NV’s Umbraco builds)</li><li>Integrating the site with the custom built strip archive via Javascript / archive API endpoints.</li></ul>",
+      "order" : 1,
+      "role" : "Front End and Umbraco CMS Developer",
+      "title" : "Footrot Flats",
+      "url" : "http://footrotflats.com"
+    },
+    "pacfic-trade-and-invest" : {
+      "company" : "NV Interactive",
+      "copy" : "<p>PTIA is a Trade Promotion Agency operating in 16 Pacific Island nations. The site tells the stories of Pacific peoples working in the tourist, creative arts and export industries and exposes small businesses in that region to potential investors. The website redevelopment project for PTIA started as simple site migration and ended as a full-blown redesign and relaunch (currently pending).</p><p>I undertook dual roles in the development process, as CMS developer and front end developer and applied my creative approach to problem solving to meet key deliverables when core requirements had been poorly communicated.</p><ul><li>Planning  and building administrative interfaces for the Umbraco CMS, using Umbraco Models Builder and extending the generated models with custom partial classes.</li><li>Converting UX wireframes and high-fidelity designs into a functional responsive web front-end using HTML, Javascript and CSS (via SCSS preprocessing). </li><li>Retroactively designing, building and fitting an image optimisation plugin to enable the digital design to align with the key deliverables - specifically the need for the highly visual website to operate efficiently on near-dialup speed internet in remote Pacific Islands. </li><li>Extrapolating the image optimisation plugin so it can be used by NV in other projects.</li><li>Mentoring the junior front end developer during this process.</li></ul>",
+      "order" : 0,
+      "role" : "Front End and Umbraco CMS Developer",
+      "title" : "Pacific Trade & Invest Australia"
+    },
+    "portraying-wellington" : {
+      "company" : "NV Interactive",
+      "copy" : "<p>In 2015, Wellington photographer Russell Kleyn asked his mate Charlie Ward to build a digital art project for him. Charlie - the lead designer for NV Interactive - brought this into the studio as a passion project, something that would allow us to flex our creative muscle. It was a tight deadline as the site needed to be operational in time for CubaDupa 2015, which was only about a month away at the time.</p><p>I was the sole developer on this project. I installed, configured and built the CMS functionality for this site in WordPress and built the front end in just two weeks in tight collaboration with the lead designer as he continued to work on the overall aesthetic. The key considerations for this site were that it needed to be readily accessible on all digital platforms, easy for participants to share their own images on social media and simple for Russell to add to the collection. The site was delivered on time and under budget and met all of the stated requirements.</p><ul><li>Developed WordPress data entry screens that contained just two pieces of information for the content editor to enter - a title and an image - allowing the client to enter over 200 portrait images in quick succession.</li><li>Altered the WordPress loop to present the portrait list randomised on each load, but to load a specific portrait first when shared via social media.</li><li>Developed a method of lazy loading images via layers so that low-resolution images are presented first and elegantly fade into high-resolution images, reducing initial load times for each image whilst providing a second, clearer image without jarring between the two.</li><li>Developed a flexible interactive grid system, allowing the end user to alter the sizes of the images displayed to better suit their own screen and viewing needs.</li></ul>",
+      "order" : 2,
+      "role" : "WordPress and Front End Developer",
+      "title" : "Portraying Wellington",
+      "url" : "http://portraying-wellington.com"
+    }
+  }
+}

@@ -643,6 +643,10 @@ blockquote {
   .module--employment:after {
     background-color: rgba(0, 0, 0, 0.3); }
 
+.module--admin {
+  padding-top: 0;
+  background: black; }
+
 .nav--main {
   position: absolute;
   right: 0;
