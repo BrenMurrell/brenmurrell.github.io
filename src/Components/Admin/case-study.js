@@ -16,7 +16,7 @@ class AdminCaseStudy extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
     handleChange(event) {
-        this.setState({value: event.target.value});
+        this.setState({[event.target.name]: event.target.value});
     }
     componentWillMount() {
 
@@ -60,7 +60,11 @@ class AdminCaseStudy extends Component {
                     onChange={this.handleChange}
                     name="company"
                 /><br/>
-                <textarea name="copy" value={this.state.copy}></textarea>
+                <textarea 
+                    name="copy" 
+                    value={this.state.copy}
+                    onChange={this.handleChange}
+                ></textarea>
                 <input type="submit" value="GO!" />
             </form>
         )
