@@ -16,7 +16,6 @@ export const fetchCaseStudies = () => async dispatch => {
 }
 
 export const updateCaseStudy = (caseStudy) => async dispatch => {
-    console.log('data sent:', caseStudy);
     
     caseStudiesRef
         .child(caseStudy.caseStudyId)
@@ -38,7 +37,6 @@ export const fetchCaseStudy = (caseStudyId) => async dispatch => {
         .child(caseStudyId)
         .once('value')
         .then(snapshot => {
-            console.log('got a case study', snapshot.val());
             dispatch({
                 type: FETCH_CASE_STUDY,
                 payload: snapshot.val()

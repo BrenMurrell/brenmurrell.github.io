@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { signOut, fetchUser } from '../../actions/signIn';
 import { connect } from "react-redux";
-import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 import AdminCaseStudies from './case-studies';
 import AdminCaseStudy from './case-study';
 import requireAuth from '../auth/requireAuth';
@@ -31,14 +31,13 @@ class Dashboard extends Component {
 
 
     render() {
-        console.log(this.props.auth)
         const { auth } = this.props;
         return(
             <div className="module module--admin">
                 <div className="module__copy">
                     <p>Welcome, { auth.displayName }</p>
-                    <img src={auth.photoURL} width="50" />
-                    <p>Not {auth.displayName}? <a href="#" onClick={this.props.signOut}>Sign out now</a></p>
+                    <img src={auth.photoURL} width="50" alt={auth.displayName} />
+                    <p>Not {auth.displayName}? <button onClick={this.props.signOut}>Sign out now</button></p>
                     { this.renderDash() }
                 </div>
             </div>

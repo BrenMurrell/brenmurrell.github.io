@@ -36,7 +36,6 @@ class AdminCaseStudies extends Component {
     
     render() {
         const { caseStudies } = this.props;
-        console.log('case studies', caseStudies);
         if(this.props.caseStudies === "loading") {
             return <h1>Loading case studies...</h1>
         }

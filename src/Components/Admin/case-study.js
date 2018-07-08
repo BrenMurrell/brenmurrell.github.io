@@ -23,7 +23,6 @@ class AdminCaseStudy extends Component {
         this.props.fetchCaseStudy(this.state.caseStudyId); 
     }
     componentWillReceiveProps(nextProps) {
-        console.log('next props', nextProps);
         this.setState({
             title: nextProps.caseStudies.title,
             company: nextProps.caseStudies.company,
@@ -32,7 +31,6 @@ class AdminCaseStudy extends Component {
         })
     }
     handleFormSubmit = event =>  {
-        console.log('submit', this.state.title, this.state.company, this.state.role, this.state.copy);
         const { title, company, role, copy, caseStudyId } = this.state;
         const { updateCaseStudy } = this.props;
         updateCaseStudy({ title: title, role: role, copy: copy, company: company, caseStudyId: caseStudyId });
