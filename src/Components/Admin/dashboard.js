@@ -3,6 +3,8 @@ import { signOut, fetchUser } from '../../actions/signIn';
 import { connect } from "react-redux";
 import { Route, NavLink } from 'react-router-dom';
 import AdminCaseStudies from './case-studies';
+import AdminJobs from './jobs';
+import AdminJob from './job';
 import AdminCaseStudy from './case-study';
 import requireAuth from '../auth/requireAuth';
 
@@ -19,6 +21,8 @@ class Dashboard extends Component {
                     <NavLink to="/admin/case-studies" activeStyle={{color: "white"}} className="nav__item" activeClassName="nav__item--active">Case Studies</NavLink>
                     <Route exact path='/admin/case-studies' component={requireAuth(AdminCaseStudies)} />
                     <Route path='/admin/case-studies/:caseStudyId' component={requireAuth(AdminCaseStudy)} />
+                    <Route exact path='/admin/employment' component={requireAuth(AdminJobs)} />
+                    <Route path='/admin/employment/:jobId' component={requireAuth(AdminJob)} />
 
                 </div>
                 

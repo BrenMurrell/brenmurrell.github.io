@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import * as actions from "../../actions/caseStudyActions";
+import * as actions from "../../actions/jobActions";
 import { Link } from 'react-router-dom';
 
 import ReactQuill from 'react-quill'; // ES6
 import 'react-quill/dist/quill.snow.css'; // ES6
 
 import _ from 'lodash';
-class AdminCaseStudies extends Component {
+class AdminJobs extends Component {
     constructor(props) {
         super();
         this.state = {
-            caseStudiesList: [],
+            jobsList: [],
             'moduleClass': '',
             adding: false,
             title: '',
             role: '',
             copy: '',
-            company: '',
-            url: ''
+            dates: ''
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleChangeQuill = this.handleChangeQuill.bind(this)
@@ -30,30 +29,30 @@ class AdminCaseStudies extends Component {
     handleChangeQuill(value) {
         this.setState({ copy: value })
     }
-    deleteCaseStudy(caseStudyId) {
-        this.props.deleteCaseStudy(caseStudyId);
+    deleteJob(jobId) {
+        this.props.deleteJob(jobId);
     }
-    rendercaseStudies() {
-        const { caseStudies } = this.props;
-        const caseStudiesList = _.map(caseStudies, (value, key) => {
+    renderjobs() {
+        const { jobs } = this.props;
+        const jobsList = _.map(jobs, (value, key) => {
             return( 
                 <div key={key}>
-                    { value.title} <Link to={`/admin/case-studies/` + key}>EDIT</Link>
-                    <button onClick={() => this.deleteCaseStudy(key)}>DELETE</button>
+                    { value.title} <Link to={`/admin/employment/` + key}>EDIT</Link>
+                    <button onClick={() => this.deleteJob(key)}>DELETE</button>
                 </div>
             )
         });
-        if (typeof caseStudiesList !== 'undefined' && caseStudiesList.length > 0) {
-            return caseStudiesList;
+        if (typeof jobsList !== 'undefined' && jobsList.length > 0) {
+            return jobsList;
         }
         return (
-            <div>No Case Studies found</div>
+            <div>No jobs found</div>
         )
 
         
     }
     componentDidMount() {
-        this.props.fetchCaseStudies();
+        this.props.fetchJobs();
         
     }
     toggleAdding() {
@@ -62,16 +61,17 @@ class AdminCaseStudies extends Component {
         })
     }
     handleAddFormSubmit = event => {
-        const { title, company, role, copy, url } = this.state;
-        const { addCaseStudy } = this.props;
-        addCaseStudy({ title: title, role: role, copy: copy, company: company, url: url });
+        alert('submitting');
+        const { title,  role, copy, dates } = this.state;
+        const { addJob } = this.props;
+        addJob({ title: title, role: role, copy: copy, dates: dates });
         event.preventDefault();
         
     }
-    rendercaseStudiesForm() {
+    renderjobsForm() {
         return (
             <form onSubmit={this.handleAddFormSubmit}>
-                <label className="c-label" htmlFor="cs-title">Project title</label>
+                <label className="c-label" htmlFor="cs-title">Company name</label>
                 <input 
                     className="c-input"
                     type="text"
@@ -80,7 +80,7 @@ class AdminCaseStudies extends Component {
                     onChange={this.handleChange}
                     name="title"
                 />
-                <label className="c-label" htmlFor="cs-role">Project role</label>
+                <label className="c-label" htmlFor="cs-role">Job Title (role)</label>
                 <input 
                     className="c-input"
                     type="text"
@@ -89,23 +89,15 @@ class AdminCaseStudies extends Component {
                     onChange={this.handleChange}
                     name="role"
                 />
-                <label className="c-label" htmlFor="cs-company">Project company</label>
+                <label className="c-label" htmlFor="cs-dates">Dates</label>
                 <input 
                     className="c-input"
                     type="text"
-                    id="cs-company"
-                    value={this.state.company}
+                    id="cs-dates"
+                    value={this.state.dates}
                     onChange={this.handleChange}
-                    name="company"
-                />
-                <label className="c-label" htmlFor="cs-url">Project URL</label>
-                <input 
-                    className="c-input"
-                    type="text"
-                    id="cs-url"
-                    value={this.state.url}
-                    onChange={this.handleChange}
-                    name="url"
+                    name="dates"
+                    placeholder="e.g. January 2018 - Present"
                 />
                 <label className="c-label" htmlFor="cs-copy">Description</label>
                 <ReactQuill 
@@ -122,28 +114,29 @@ class AdminCaseStudies extends Component {
         )
     }
     render() {
-        if(this.props.caseStudies === "loading") {
-            return <h1>Loading case studies...</h1>
+        const { jobs } = this.props;
+        if(this.props.jobs === "loading") {
+            return <h1>Loading jobs...</h1>
         }
         if(this.state.adding) {
             return (
                 <div>
-                    { this.rendercaseStudiesForm() }
+                    { this.renderjobsForm() }
                     <button onClick={this.toggleAdding.bind(this)   }>Cancel</button>
                 </div>
             )
         }
         return(
             <div>
-                <button onClick={this.toggleAdding.bind(this)}>Add new case study</button>
-                { this.rendercaseStudies() }
+                <button onClick={this.toggleAdding.bind(this)}>Add new Job</button>
+                { this.renderjobs() }
             </div>
         )
     }
 }
-// export default(AdminCaseStudies);
-function mapStateToProps({ auth, caseStudies }) {
-    return { auth, caseStudies };
+// export default(AdminJobs);
+function mapStateToProps({ auth, jobs }) {
+    return { auth, jobs };
   }
   
-  export default connect(mapStateToProps, actions)(AdminCaseStudies);
+  export default connect(mapStateToProps, actions)(AdminJobs);

@@ -8,6 +8,7 @@ const databaseRef = firebase.database().ref();
 
 export const caseStudiesRef = databaseRef.child("case-studies"); //.orderByChild('order');
 export const caseStudyRef = databaseRef.child("case-studies");
+export const jobsRef = databaseRef.child("jobs");
 
 //export const buildPartsRef = databaseRef.child("buildParts");
 //export const partsRef = databaseRef.child("parts");
