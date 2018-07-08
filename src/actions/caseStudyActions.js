@@ -21,7 +21,7 @@ export const fetchCaseStudies = () => async dispatch => {
 }
 
 export const updateCaseStudy = (caseStudy) => async dispatch => {
-    
+    console.log('submitted case study', caseStudy);
     caseStudiesRef
         .child(caseStudy.caseStudyId)
         .update(caseStudy)

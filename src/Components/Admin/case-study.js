@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import * as actions from "../../actions/caseStudyActions";
-
+import ReactQuill from 'react-quill'; // ES6
+import 'react-quill/dist/quill.snow.css'; // ES6
+import { withRouter } from "react-router-dom";
 
 class AdminCaseStudy extends Component {
     constructor(props) {
@@ -11,12 +13,17 @@ class AdminCaseStudy extends Component {
             title: '',
             role: '',
             company: '',
-            copy: ''
+            copy: '',
+            url: ''
         };
         this.handleChange = this.handleChange.bind(this);
+        this.handleChangeQuill = this.handleChangeQuill.bind(this)
     }
     handleChange(event) {
         this.setState({[event.target.name]: event.target.value});
+    }
+    handleChangeQuill(value) {
+        this.setState({ copy: value })
     }
     componentWillMount() {
 
@@ -27,13 +34,15 @@ class AdminCaseStudy extends Component {
             title: nextProps.caseStudies.title,
             company: nextProps.caseStudies.company,
             role: nextProps.caseStudies.role,
-            copy: nextProps.caseStudies.copy
+            copy: nextProps.caseStudies.copy,
+            url: nextProps.caseStudies.url
         })
     }
     handleFormSubmit = event =>  {
-        const { title, company, role, copy, caseStudyId } = this.state;
+        const { title, company, role, copy, caseStudyId, url } = this.state;
         const { updateCaseStudy } = this.props;
-        updateCaseStudy({ title: title, role: role, copy: copy, company: company, caseStudyId: caseStudyId });
+        updateCaseStudy({ title: title, role: role, copy: copy, company: company, caseStudyId: caseStudyId, url: url });
+        this.props.history.push('/admin/case-studies');
         event.preventDefault();
     }
     renderForm() {
@@ -57,6 +66,16 @@ class AdminCaseStudy extends Component {
                     onChange={this.handleChange}
                     name="role"
                 />
+                <label className="c-label" htmlFor="cs-role">Project URL</label>
+                <input 
+                    className="c-input"
+                    type="text"
+                    id="cs-url"
+                    value={this.state.url}
+                    onChange={this.handleChange}
+                    name="url"
+                    placeholder="Leave blank for no link"
+                />
                 <label className="c-label" htmlFor="cs-company">Project company</label>
                 <input 
                     className="c-input"
@@ -67,13 +86,18 @@ class AdminCaseStudy extends Component {
                     name="company"
                 />
                 <label className="c-label" htmlFor="cs-copy">Description</label>
-                <textarea 
-                    className="c-textarea"
-                    name="copy" 
+
+                <ReactQuill 
+                    theme="snow"
                     value={this.state.copy}
-                    onChange={this.handleChange}
-                    id="cs-copy"
-                ></textarea>
+                    onChange={this.handleChangeQuill} 
+                    name="copy"
+                    id="cs-copy" 
+                    className="c-textarea"   
+                />
+
+                <br/><br/>
+                
                 <input type="submit" value="GO!" />
             </form>
         )
@@ -87,7 +111,6 @@ class AdminCaseStudy extends Component {
             <div>
                 Gottem - { this.props.match.params.caseStudyId }
                 { this.renderForm(caseStudies) }
-                { caseStudies.title } - { caseStudies.company }
             </div>
         )
     }

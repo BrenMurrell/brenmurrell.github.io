@@ -29,7 +29,7 @@ class SignIn extends Component {
     
     render() {
         return(
-            <div class="module">
+            <div className="module">
                 <div className="module__copy">
                     { this.renderButton() }                
                 </div>

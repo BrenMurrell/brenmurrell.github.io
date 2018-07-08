@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import * as actions from "../../actions/caseStudyActions";
 import { Link } from 'react-router-dom';
+
+import ReactQuill from 'react-quill'; // ES6
+import 'react-quill/dist/quill.snow.css'; // ES6
+
 import _ from 'lodash';
 class AdminCaseStudies extends Component {
     constructor(props) {
@@ -17,9 +21,14 @@ class AdminCaseStudies extends Component {
             url: ''
         };
         this.handleChange = this.handleChange.bind(this);
+        this.handleChangeQuill = this.handleChangeQuill.bind(this)
+        
     }
     handleChange(event) {
         this.setState({[event.target.name]: event.target.value});
+    }
+    handleChangeQuill(value) {
+        this.setState({ copy: value })
     }
     deleteCaseStudy(caseStudyId) {
         this.props.deleteCaseStudy(caseStudyId);
@@ -99,13 +108,15 @@ class AdminCaseStudies extends Component {
                     name="url"
                 />
                 <label className="c-label" htmlFor="cs-copy">Description</label>
-                <textarea 
-                    className="c-textarea"
-                    name="copy" 
+                <ReactQuill 
+                    theme="snow"
                     value={this.state.copy}
-                    onChange={this.handleChange}
-                    id="cs-copy"
-                ></textarea>
+                    onChange={this.handleChangeQuill} 
+                    name="copy"
+                    id="cs-copy" 
+                    className="c-textarea"   
+                />
+                <br/><br/>
                 <input type="submit" value="GO!" />
             </form>
         )
