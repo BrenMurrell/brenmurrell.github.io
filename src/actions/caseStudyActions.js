@@ -10,10 +10,27 @@ export const fetchCaseStudies = () => async dispatch => {
         
         dispatch({
             type: FETCH_CASE_STUDIES,
-            payload: caseStudyArray
+            payload: snapshot.val()
         });
     });
 }
+
+export const updateCaseStudy = (caseStudy) => async dispatch => {
+    console.log('data sent:', caseStudy);
+    
+    caseStudiesRef
+        .child(caseStudy.caseStudyId)
+        .update(caseStudy)
+        .then(() => {
+            return {};
+        }).catch(error => {
+            return {
+                errorCode: error.code,
+                errorMessage: error.message
+            }
+        });       
+}
+
 
 
 export const fetchCaseStudy = (caseStudyId) => async dispatch => {
@@ -28,6 +45,6 @@ export const fetchCaseStudy = (caseStudyId) => async dispatch => {
             });
         });
 }
-export const addCaseStudy = newCaseStudy => async dispatch => {
-    caseStudiesRef.push().set(newCaseStudy);
-}
+// export const addCaseStudy = newCaseStudy => async dispatch => {
+//     caseStudiesRef.push().set(newCaseStudy);
+// }

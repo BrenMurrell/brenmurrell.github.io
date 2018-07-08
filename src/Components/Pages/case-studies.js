@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as actions from "../../actions/caseStudyActions";
 import { connect } from 'react-redux';
-
+import _ from 'lodash';
 import MetaTags from 'react-meta-tags';
 
 import CaseStudy  from '../CaseStudy';
@@ -25,7 +25,7 @@ class CaseStudies extends Component {
 
     rendercaseStudies() {
         const { caseStudies } = this.props;
-        const caseStudiesList = caseStudies.map((value, key) => {
+        const caseStudiesList = _.map(caseStudies, (value, key) => {
             return <CaseStudy key={key} caseStudyId={key} caseStudy={value}/>            
         });
         if (typeof caseStudiesList !== 'undefined' && caseStudiesList.length > 0) {

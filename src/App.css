@@ -473,6 +473,18 @@ blockquote {
   display: block;
   position: relative; }
 
+.c-input {
+  display: block;
+  width: 100%; }
+
+.c-label {
+  display: block; }
+
+.c-textarea {
+  display: block;
+  width: 100%;
+  height: 400px; }
+
 .c-footer {
   padding-bottom: 80px; }
 

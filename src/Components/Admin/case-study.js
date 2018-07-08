@@ -33,37 +33,48 @@ class AdminCaseStudy extends Component {
     }
     handleFormSubmit = event =>  {
         console.log('submit', this.state.title, this.state.company, this.state.role, this.state.copy);
+        const { title, company, role, copy, caseStudyId } = this.state;
+        const { updateCaseStudy } = this.props;
+        updateCaseStudy({ title: title, role: role, copy: copy, company: company, caseStudyId: caseStudyId });
         event.preventDefault();
     }
     renderForm() {
-        const { caseStudies } = this.props;
         return(
             <form onSubmit={this.handleFormSubmit}>
+                <label className="c-label" htmlFor="cs-title">Project title</label>
                 <input 
+                    className="c-input"
                     type="text"
                     id="cs-title"
                     value={this.state.title}
                     onChange={this.handleChange}
                     name="title"
-                /><br/>
+                />
+                <label className="c-label" htmlFor="cs-role">Project role</label>
                 <input 
+                    className="c-input"
                     type="text"
                     id="cs-role"
                     value={this.state.role}
                     onChange={this.handleChange}
                     name="role"
-                /><br/>
+                />
+                <label className="c-label" htmlFor="cs-company">Project company</label>
                 <input 
+                    className="c-input"
                     type="text"
                     id="cs-company"
                     value={this.state.company}
                     onChange={this.handleChange}
                     name="company"
-                /><br/>
+                />
+                <label className="c-label" htmlFor="cs-copy">Description</label>
                 <textarea 
+                    className="c-textarea"
                     name="copy" 
                     value={this.state.copy}
                     onChange={this.handleChange}
+                    id="cs-copy"
                 ></textarea>
                 <input type="submit" value="GO!" />
             </form>

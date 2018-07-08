@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import * as actions from "../../actions/caseStudyActions";
 import { Link } from 'react-router-dom';
-
+import _ from 'lodash';
 class AdminCaseStudies extends Component {
     constructor(props) {
         super();
@@ -13,7 +13,7 @@ class AdminCaseStudies extends Component {
     }
     rendercaseStudies() {
         const { caseStudies } = this.props;
-        const caseStudiesList = caseStudies.map((value, key) => {
+        const caseStudiesList = _.map(caseStudies, (value, key) => {
             return( 
                 <div key={key}>
                     { value.title} <Link to={`/admin/case-studies/` + key}>EDIT</Link>
