@@ -80,11 +80,9 @@ class AdminCaseStudy extends Component {
     }
     render() {
         const { caseStudies } = this.props;
-        
         if(this.props.caseStudy === "loading") {
             return <h1>Loading case study...</h1>
         }
-        //this.setState({ 'title': 'and a wee test'});
         return(
             <div>
                 Gottem - { this.props.match.params.caseStudyId }
