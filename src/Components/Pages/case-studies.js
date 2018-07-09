@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import _ from 'lodash';
 import MetaTags from 'react-meta-tags';
 
-import CaseStudy  from '../CaseStudy';
+import Card from '../Generic/card';
 
 class CaseStudies extends Component {
     constructor(props) {
@@ -27,7 +27,8 @@ class CaseStudies extends Component {
         const { caseStudies } = this.props;        
         const sortedCaseStudies = _.orderBy(caseStudies, ['order'], ['asc']);
         const caseStudiesList = sortedCaseStudies.map((value, key) => {
-            return <CaseStudy key={key} caseStudyId={key} caseStudy={value}/>            
+            return <Card key={value.caseStudyId} title={value.title} subtitle={value.role} copy={value.copy} link={value.url} footer={value.company} />
+            
         });
         if (typeof caseStudiesList !== 'undefined' && caseStudiesList.length > 0) {
             return caseStudiesList;

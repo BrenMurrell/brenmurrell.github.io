@@ -3,6 +3,7 @@ import * as actions from "../../actions/jobActions";
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import Job from '../Job';
+import Card from '../Generic/card';
 
 import MetaTags from 'react-meta-tags';
 
@@ -22,16 +23,14 @@ class Employment extends Component {
         }
         const sortedJobs = _.orderBy(jobs, ['order'], ['desc']);
         const jobsList = sortedJobs.map((value, key) => {
-            return <Job key={value.jobId} jobId={value.jobId} job={value}/>            
+            return <Card key={value.jobId} title={value.title} subtitle={value.role} copy={value.copy} footer={value.dates} />
         });
         if (typeof jobsList !== 'undefined' && jobsList.length > 0) {
             return jobsList;
         }
         return (
             <div>No employment history found</div>
-        )
-
-        
+        )        
     }
     componentWillMount() {
         this.props.fetchJobs();
@@ -44,17 +43,12 @@ class Employment extends Component {
                     <h1 className="module__title">Employment history</h1>
                     <div className="cards cards--half">
                         { this.renderJobs() }
-                        
-                        
-                          
                     </div>
                 </div>
-                
-                    <MetaTags>
-                        <title>Employment History | Bren Murrell</title>
-                        <meta name="description" content="A canonical listing of all of my current and previous employers / responsibilities" />
-                    </MetaTags>
-                
+                <MetaTags>
+                    <title>Employment History | Bren Murrell</title>
+                    <meta name="description" content="A canonical listing of all of my current and previous employers / responsibilities" />
+                </MetaTags>
             </section>
         )
     }
