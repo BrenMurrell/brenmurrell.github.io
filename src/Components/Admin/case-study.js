@@ -13,7 +13,8 @@ class AdminCaseStudy extends Component {
             role: '',
             company: '',
             copy: '',
-            url: ''
+            url: '',
+            order: ''
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleChangeQuill = this.handleChangeQuill.bind(this)
@@ -34,13 +35,14 @@ class AdminCaseStudy extends Component {
             company: nextProps.caseStudies.company,
             role: nextProps.caseStudies.role,
             copy: nextProps.caseStudies.copy,
-            url: nextProps.caseStudies.url
+            url: nextProps.caseStudies.url,
+            order: nextProps.caseStudies.order
         })
     }
     handleFormSubmit = event =>  {
-        const { title, company, role, copy, caseStudyId, url } = this.state;
+        const { title, company, role, copy, caseStudyId, url, order } = this.state;
         const { updateCaseStudy } = this.props;
-        updateCaseStudy({ title: title, role: role, copy: copy, company: company, caseStudyId: caseStudyId, url: url });
+        updateCaseStudy({ title: title, role: role, copy: copy, company: company, caseStudyId: caseStudyId, url: url, order: order });
         this.props.history.push('/admin/case-studies');
         event.preventDefault();
     }
@@ -83,6 +85,15 @@ class AdminCaseStudy extends Component {
                     value={this.state.company}
                     onChange={this.handleChange}
                     name="company"
+                />
+                <label className="c-label" htmlFor="cs-order">Order</label>
+                <input 
+                    className="c-input"
+                    type="number"
+                    id="cs-order"
+                    value={this.state.order}
+                    onChange={this.handleChange}
+                    name="order"
                 />
                 <label className="c-label" htmlFor="cs-copy">Description</label>
 

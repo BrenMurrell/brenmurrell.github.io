@@ -55,5 +55,6 @@ export const deleteCaseStudy = caseStudyId => async dispatch => {
 export const addCaseStudy = newCaseStudy => async dispatch => {
     //caseStudiesRef.push().set(newCaseStudy);
     var projectSlug = slugify(newCaseStudy.title);
+    newCaseStudy.caseStudyId = projectSlug;
     caseStudiesRef.child(projectSlug).set(newCaseStudy);
 }

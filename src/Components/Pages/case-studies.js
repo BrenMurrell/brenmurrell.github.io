@@ -24,8 +24,9 @@ class CaseStudies extends Component {
 
 
     rendercaseStudies() {
-        const { caseStudies } = this.props;
-        const caseStudiesList = _.map(caseStudies, (value, key) => {
+        const { caseStudies } = this.props;        
+        const sortedCaseStudies = _.orderBy(caseStudies, ['order'], ['asc']);
+        const caseStudiesList = sortedCaseStudies.map((value, key) => {
             return <CaseStudy key={key} caseStudyId={key} caseStudy={value}/>            
         });
         if (typeof caseStudiesList !== 'undefined' && caseStudiesList.length > 0) {

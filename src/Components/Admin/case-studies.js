@@ -18,7 +18,8 @@ class AdminCaseStudies extends Component {
             role: '',
             copy: '',
             company: '',
-            url: ''
+            url: '',
+            order: ''
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleChangeQuill = this.handleChangeQuill.bind(this)
@@ -33,13 +34,17 @@ class AdminCaseStudies extends Component {
     deleteCaseStudy(caseStudyId) {
         this.props.deleteCaseStudy(caseStudyId);
     }
+    
+
+
     rendercaseStudies() {
-        const { caseStudies } = this.props;
-        const caseStudiesList = _.map(caseStudies, (value, key) => {
+        const { caseStudies } = this.props;        
+        const sortedCaseStudies = _.orderBy(caseStudies, ['order'], ['asc']);
+        const caseStudiesList = sortedCaseStudies.map((value, key) => {
             return( 
-                <div key={key}>
-                    { value.title} <Link to={`/admin/case-studies/` + key}>EDIT</Link>
-                    <button onClick={() => this.deleteCaseStudy(key)}>DELETE</button>
+                <div key={value.caseStudyId}>
+                    { value.title} <Link to={`/admin/case-studies/` + value.caseStudyId}>EDIT</Link>
+                    <button onClick={() => this.deleteCaseStudy(value.caseStudyId)}>DELETE</button>
                 </div>
             )
         });
@@ -62,9 +67,11 @@ class AdminCaseStudies extends Component {
         })
     }
     handleAddFormSubmit = event => {
-        const { title, company, role, copy, url } = this.state;
+        const { title, company, role, copy, url, order } = this.state;
         const { addCaseStudy } = this.props;
-        addCaseStudy({ title: title, role: role, copy: copy, company: company, url: url });
+        addCaseStudy({ title: title, role: role, copy: copy, company: company, url: url, order: order });
+        this.props.history.push('/admin/case-studies');
+        
         event.preventDefault();
         
     }
@@ -106,6 +113,15 @@ class AdminCaseStudies extends Component {
                     value={this.state.url}
                     onChange={this.handleChange}
                     name="url"
+                />
+                <label className="c-label" htmlFor="cs-order">Order</label>
+                <input 
+                    className="c-input"
+                    type="number"
+                    id="cs-order"
+                    value={this.state.order}
+                    onChange={this.handleChange}
+                    name="order"
                 />
                 <label className="c-label" htmlFor="cs-copy">Description</label>
                 <ReactQuill 

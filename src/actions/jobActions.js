@@ -53,8 +53,7 @@ export const deleteJob = jobId => async dispatch => {
     jobsRef.child(jobId).remove();
 }
 export const addJob = newjob => async dispatch => {
-    
-
     var jobSlug = slugify(newjob.title);
+    newjob.jobId = jobSlug;
     jobsRef.child(jobSlug).set(newjob);
 }

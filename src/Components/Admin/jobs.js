@@ -17,7 +17,8 @@ class AdminJobs extends Component {
             title: '',
             role: '',
             copy: '',
-            dates: ''
+            dates: '',
+            order: ''
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleChangeQuill = this.handleChangeQuill.bind(this)
@@ -34,11 +35,12 @@ class AdminJobs extends Component {
     }
     renderjobs() {
         const { jobs } = this.props;
-        const jobsList = _.map(jobs, (value, key) => {
+        const sortedJobs = _.orderBy(jobs, ['order'], ['desc']);
+        const jobsList = sortedJobs.map((value, key) => {
             return( 
-                <div key={key}>
-                    { value.title} <Link to={`/admin/employment/` + key}>EDIT</Link>
-                    <button onClick={() => this.deleteJob(key)}>DELETE</button>
+                <div key={value.jobId}>
+                    { value.title} <Link to={`/admin/employment/` + value.jobId}>EDIT</Link>
+                    <button onClick={() => this.deleteJob(value.jobId)}>DELETE</button>
                 </div>
             )
         });
@@ -61,12 +63,11 @@ class AdminJobs extends Component {
         })
     }
     handleAddFormSubmit = event => {
-        alert('submitting');
-        const { title,  role, copy, dates } = this.state;
+        const { title,  role, copy, dates, order } = this.state;
         const { addJob } = this.props;
-        addJob({ title: title, role: role, copy: copy, dates: dates });
+        addJob({ title: title, role: role, copy: copy, dates: dates, order: order });
+        this.props.history.push('/admin/employment');        
         event.preventDefault();
-        
     }
     renderjobsForm() {
         return (
@@ -99,6 +100,15 @@ class AdminJobs extends Component {
                     name="dates"
                     placeholder="e.g. January 2018 - Present"
                 />
+                <label className="c-label" htmlFor="cs-order">Order</label>
+                <input 
+                    className="c-input"
+                    type="number"
+                    id="cs-order"
+                    value={this.state.order}
+                    onChange={this.handleChange}
+                    name="order"
+                />
                 <label className="c-label" htmlFor="cs-copy">Description</label>
                 <ReactQuill 
                     theme="snow"
@@ -114,7 +124,6 @@ class AdminJobs extends Component {
         )
     }
     render() {
-        const { jobs } = this.props;
         if(this.props.jobs === "loading") {
             return <h1>Loading jobs...</h1>
         }

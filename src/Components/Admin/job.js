@@ -12,7 +12,8 @@ class AdminJob extends Component {
             title: '',
             role: '',
             dates: '',
-            copy: ''
+            copy: '',
+            order: ''
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleChangeQuill = this.handleChangeQuill.bind(this);
@@ -33,12 +34,13 @@ class AdminJob extends Component {
             role: nextProps.jobs.role,
             dates: nextProps.jobs.dates,
             copy: nextProps.jobs.copy,
+            order: nextProps.jobs.order,
         })
     }
     handleFormSubmit = event =>  {
-        const { title, role, copy, dates, jobId } = this.state;
+        const { title, role, copy, dates, jobId, order } = this.state;
         const { updateJob } = this.props;
-        updateJob({ title: title, role: role, copy: copy, dates: dates, jobId: jobId });
+        updateJob({ title: title, role: role, copy: copy, dates: dates, jobId: jobId, order, order });
         this.props.history.push('/admin/employment');
         event.preventDefault();
     }
@@ -72,6 +74,15 @@ class AdminJob extends Component {
                     onChange={this.handleChange}
                     name="dates"
                     placeholder="e.g. January 2018 - Present"
+                />
+                <label className="c-label" htmlFor="cs-order">Order</label>
+                <input 
+                    className="c-input"
+                    type="number"
+                    id="cs-order"
+                    value={this.state.order}
+                    onChange={this.handleChange}
+                    name="order"
                 />
                 <label className="c-label" htmlFor="cs-copy">Description</label>
                 <ReactQuill 
