@@ -6,16 +6,7 @@ import { Link } from 'react-router-dom';
 class SignIn extends Component {
     renderButton() {
         if(this.props.auth) {
-            return (
-                <div>
-                    <h1>Welcome, {this.props.auth.displayName}!</h1>
-                    <p><Link to="/admin">Go to the Dashboard</Link></p>
-                    <button className="social-signin" onClick={this.props.signOut}>
-                        Sign out
-                    </button>
-
-                </div>
-            )
+            this.props.history.push('/admin');
         } 
         return(
             <div>
@@ -29,7 +20,7 @@ class SignIn extends Component {
     
     render() {
         return(
-            <div className="module">
+            <div className="module module--admin">
                 <div className="module__copy">
                     { this.renderButton() }                
                 </div>

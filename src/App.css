@@ -438,6 +438,54 @@ blockquote {
   margin: 0;
   line-height: 16px; }
 
+.dashpanel {
+  margin: 8px 0; }
+
+.dashpanel__item {
+  background: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  color: white;
+  font-weight: 900;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.dashpanel__button {
+  background: #c8c8c8;
+  border: none;
+  color: black;
+  height: 32px;
+  width: 32px;
+  border-radius: 5px;
+  display: inline-block;
+  line-height: 32px;
+  text-align: center;
+  margin-right: 8px; }
+  .dashpanel__button:hover {
+    cursor: pointer;
+    background: white; }
+
+.dashpanel__button--edit {
+  color: darkgreen; }
+  .dashpanel__button--edit:hover {
+    color: #00c800; }
+
+.dashpanel__button--wide {
+  width: auto; }
+
+.dashpanel__button--delete {
+  color: #780000; }
+  .dashpanel__button--delete:hover {
+    color: #c80000; }
+
+.dashpanel__avatar {
+  float: left;
+  margin-right: 8px;
+  width: 60px; }
+
 .c-figure {
   flex: 1 1 33%;
   padding: 8px;
@@ -622,6 +670,11 @@ blockquote {
     display: block;
     content: "";
     z-index: 0; }
+  .module:before {
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    content: ""; }
 
 .module__title {
   display: block;
@@ -654,15 +707,27 @@ blockquote {
   .module--summary:after {
     background-color: rgba(0, 0, 0, 0.9); }
 
-.module--case-studies {
-  background-image: url("/img/covers/ribs.jpg"); }
-  .module--case-studies:after {
-    background-color: rgba(0, 0, 0, 0.3); }
+.module--case-studies:before {
+  background-image: url("/img/covers/ribs.jpg");
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
 
-.module--employment {
-  background-image: url("/img/covers/desk.jpg"); }
-  .module--employment:after {
-    background-color: rgba(0, 0, 0, 0.3); }
+.module--case-studies:after {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.module--employment:before {
+  background-image: url("/img/covers/desk.jpg");
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.module--employment:after {
+  background-color: rgba(0, 0, 0, 0.3); }
 
 .module--admin {
   padding-top: 0;

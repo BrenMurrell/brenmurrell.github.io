@@ -8,6 +8,10 @@ import AdminJob from './job';
 import AdminCaseStudy from './case-study';
 import requireAuth from '../auth/requireAuth';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
+
+
 
 class Dashboard extends Component {
 
@@ -40,8 +44,9 @@ class Dashboard extends Component {
             <div className="module module--admin">
                 <div className="module__copy">
                     <p>Welcome, { auth.displayName }</p>
-                    <img src={auth.photoURL} width="50" alt={auth.displayName} />
-                    <p>Not {auth.displayName}? <button onClick={this.props.signOut}>Sign out now</button></p>
+                    <img src={auth.photoURL} alt={auth.displayName} className="dashpanel__avatar" />
+                    <p>Not {auth.displayName}?<br/> 
+                    <button className="dashpanel__button dashpanel__button--wide" onClick={this.props.signOut}><FontAwesomeIcon icon={faSignOutAlt} /> Sign out now</button></p>
                     { this.renderDash() }
                 </div>
             </div>
