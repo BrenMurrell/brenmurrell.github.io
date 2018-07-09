@@ -19,6 +19,12 @@ $max-content-width: 1140px;
         content: "";
         z-index: 0;
     }
+    &:before {
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+        content: "";
+    }
 }
 .module__title {
     display: block;
@@ -58,13 +64,21 @@ $max-content-width: 1140px;
     
 }
 .module--case-studies {
-    background-image: url('/img/covers/ribs.jpg');
+    &:before {
+        background-image: url('/img/covers/ribs.jpg');
+        position: fixed;
+        @include position(0,0,0,0);
+    }
     &:after {
         background-color: rgba(0,0,0,0.3);   
     }
 }
 .module--employment {
-    background-image: url('/img/covers/desk.jpg');
+    &:before {
+        background-image: url('/img/covers/desk.jpg');
+        position: fixed;
+        @include position(0,0,0,0);
+    }
     &:after {
         background-color: rgba(0,0,0,0.3);   
     }

@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom';
 import ReactQuill from 'react-quill'; // ES6
 import 'react-quill/dist/quill.snow.css'; // ES6
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit, faTrashAlt, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
+
 import _ from 'lodash';
 class AdminCaseStudies extends Component {
     constructor(props) {
@@ -42,14 +45,19 @@ class AdminCaseStudies extends Component {
         const sortedCaseStudies = _.orderBy(caseStudies, ['order'], ['asc']);
         const caseStudiesList = sortedCaseStudies.map((value, key) => {
             return( 
-                <div key={value.caseStudyId}>
-                    { value.title} <Link to={`/admin/case-studies/` + value.caseStudyId}>EDIT</Link>
-                    <button onClick={() => this.deleteCaseStudy(value.caseStudyId)}>DELETE</button>
+                <div className="dashpanel__item" key={value.caseStudyId}>
+                    <Link className="dashpanel__button dashpanel__button--edit" to={`/admin/case-studies/` + value.caseStudyId}><FontAwesomeIcon icon={faEdit} /></Link>
+                    <button className="dashpanel__button dashpanel__button--delete" onClick={() => this.deleteCaseStudy(value.caseStudyId)}><FontAwesomeIcon icon={faTrashAlt} /></button>
+                    { value.title} ({value.order})
                 </div>
             )
         });
         if (typeof caseStudiesList !== 'undefined' && caseStudiesList.length > 0) {
-            return caseStudiesList;
+            return (
+                <div className="dashpanel">
+                    { caseStudiesList}
+                </div>
+            )
         }
         return (
             <div>No Case Studies found</div>
@@ -151,7 +159,7 @@ class AdminCaseStudies extends Component {
         }
         return(
             <div>
-                <button onClick={this.toggleAdding.bind(this)}>Add new case study</button>
+                <button onClick={this.toggleAdding.bind(this)} className="dashpanel__button dashpanel__button--wide"><FontAwesomeIcon icon={faPlusCircle} /> Add new case study</button>
                 { this.rendercaseStudies() }
             </div>
         )

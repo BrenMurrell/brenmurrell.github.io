@@ -3,6 +3,11 @@ import { connect } from "react-redux";
 import * as actions from "../../actions/jobActions";
 import { Link } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit, faTrashAlt, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
+
+
+
 import ReactQuill from 'react-quill'; // ES6
 import 'react-quill/dist/quill.snow.css'; // ES6
 
@@ -38,14 +43,19 @@ class AdminJobs extends Component {
         const sortedJobs = _.orderBy(jobs, ['order'], ['desc']);
         const jobsList = sortedJobs.map((value, key) => {
             return( 
-                <div key={value.jobId}>
-                    { value.title} <Link to={`/admin/employment/` + value.jobId}>EDIT</Link>
-                    <button onClick={() => this.deleteJob(value.jobId)}>DELETE</button>
+                <div className="dashpanel__item" key={value.jobId}>
+                    <Link className="dashpanel__button dashpanel__button--edit" to={`/admin/employment/` + value.jobId}><FontAwesomeIcon icon={faEdit} /></Link>
+                    <button className="dashpanel__button dashpanel__button--delete" onClick={() => this.deleteJob(value.jobId)}><FontAwesomeIcon icon={faTrashAlt} /></button>
+                    { value.title} ({value.order})
                 </div>
             )
         });
         if (typeof jobsList !== 'undefined' && jobsList.length > 0) {
-            return jobsList;
+            return (
+                <div className="dashpanel">
+                    { jobsList }
+                </div>
+            )
         }
         return (
             <div>No jobs found</div>
@@ -137,7 +147,7 @@ class AdminJobs extends Component {
         }
         return(
             <div>
-                <button onClick={this.toggleAdding.bind(this)}>Add new Job</button>
+                <button onClick={this.toggleAdding.bind(this)} className="dashpanel__button dashpanel__button--wide"><FontAwesomeIcon icon={faPlusCircle} /> Add new Job</button>
                 { this.renderjobs() }
             </div>
         )
