@@ -26,7 +26,6 @@ class Navigation extends Component {
     }
     renderAdminLink() {
         const { auth } = this.props;
-        console.log('auth', auth);
         if(auth) {
             return(
                 <NavLink onClick={ this.toggleNav.bind(this) } to="/admin" className="nav__item">Admin</NavLink>            

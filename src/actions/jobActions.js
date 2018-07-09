@@ -21,7 +21,6 @@ export const fetchJobs = () => async dispatch => {
 }
 
 export const updateJob = (job) => async dispatch => {
-    console.log('submitted job', job);
     jobsRef
         .child(job.jobId)
         .update(job)
