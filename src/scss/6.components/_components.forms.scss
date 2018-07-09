@@ -1,6 +1,10 @@
 .c-input {
     display: block;
     width: 100%;
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid;
+    margin-bottom: 8px;
 
 }
 .c-label {
@@ -12,6 +16,7 @@
     height: 400px;
     background: white;
     color: #222;
+    font-size: 16px;    
     strong {
         font-weight: 900;
     }
@@ -21,4 +26,5 @@
 }
 .ql-editor {
     background: white;
+    font-size: 16px;
 }
