@@ -1,12 +1,38 @@
 .nav--main {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: none;
+    position: fixed;
+    @include position(0,0,0,0);
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    top: 100vh;
+    overflow: hidden;
+    transition: top 0.4s;
     @media screen and (min-width: $md) {
+        text-align: left;
         display: block;
+        position: absolute;
+        left: auto;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: none;
     }
+    &.nav--open  {
+        top: 0;
+    }
+}
+.nav__toggle {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 61px;
+    width: 61px;
+    cursor: pointer;
+    @media screen and (min-width: $md) {
+        display: none;
+    }    
 }
 .nav__item {
     display: inline-block;
@@ -18,4 +44,83 @@
 }
 .nav__item--active {
     text-decoration: underline;
+}
+.nav__bar {
+    position: absolute;
+    height: 3px;
+    width: 31px;
+    border-radius: 2px;
+    background-color: white;
+    left: 15px;
+}
+.nav__bar--top {
+    top: 10px;
+    transform-origin: 15px 10px;
+    transform: rotate3d(0,0,0, 45deg);
+    transition: transform 0.4s 0.4s;
+    animation: nav-bar-top-reverse 0.8s;
+    
+    .nav--open & {
+        //transform: rotate3d(0,0,1, 45deg);
+        animation: nav-bar-top 0.8s;
+        transform: rotate3d(0,0, 1, 45deg) translate3d(0,10px,0) 
+    }
+}
+.nav__bar--mid {
+    top: 20px;
+    opacity: 1;
+    transition: opacity 0s 0.4s;
+    .nav--open & {
+        opacity: 0;
+    }
+}
+.nav__bar--bottom {
+    top: 30px;
+    animation: nav-bar-bottom-reverse 0.8s;  
+    transform: rotate3d(0,0,0, 45deg);
+    transition: transform 0.4s 0.4s;  
+    transform-origin: 15px -7px;
+    .nav--open & {
+        animation: nav-bar-bottom 0.8s;
+        transform: rotate3d(0,0, -1, 45deg) translate3d(0,-10px,0) 
+    }
+}
+.nav__bar-label {
+    position: absolute;
+    bottom: 4px;
+    width: 61px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+@keyframes nav-bar-top {
+    0%   { transform: rotate3d(0,0, 0, 45deg) translate3d(0,0,0) }
+    25%  { transform: rotate3d(0,0, 0, 45deg) translate3d(0,10px,0) }
+    50%  { transform: rotate3d(0,0, 0, 45deg) translate3d(0,10px,0) }
+    75%  { transform: rotate3d(0,0, 1, 45deg) translate3d(0,10px,0) }
+    100%  { transform: rotate3d(0,0, 1, 45deg) translate3d(0,10px,0) }
+}
+
+@keyframes nav-bar-top-reverse {
+    0%  { transform: rotate3d(0,0, 1, 45deg) translate3d(0,10px,0) }
+    25%  { transform: rotate3d(0,0, 1, 45deg) translate3d(0,10px,0) }
+    50%  { transform: rotate3d(0,0, 0, 45deg) translate3d(0,10px,0) }
+    75%  { transform: rotate3d(0,0, 0, 45deg) translate3d(0,10px,0) }
+    100%   { transform: rotate3d(0,0, 0, 45deg) translate3d(0,0,0) }
+}
+
+@keyframes nav-bar-bottom {
+    0%   { transform: rotate3d(0,0, 0, 45deg) translate3d(0,0,0) }
+    25%  { transform: rotate3d(0,0, 0, 45deg) translate3d(0,-10px,0) }
+    50%  { transform: rotate3d(0,0, 0, 45deg) translate3d(0,-10px,0) }
+    75%  { transform: rotate3d(0,0,-1, 45deg) translate3d(0,-10px,0) }
+    100%  { transform: rotate3d(0,0, -1, 45deg) translate3d(0,-10px,0) }
+}
+
+@keyframes nav-bar-bottom-reverse {
+    0%  { transform: rotate3d(0,0, -1, 45deg) translate3d(0,-10px,0) }
+    25%  { transform: rotate3d(0,0, -1, 45deg) translate3d(0,-10px,0) }
+    50%  { transform: rotate3d(0,0, 0, 45deg) translate3d(0,-10px,0) }
+    75%  { transform: rotate3d(0,0, 0, 45deg) translate3d(0,-10px,0) }
+    100%   { transform: rotate3d(0,0, 0, 45deg) translate3d(0,0,0) }
 }
