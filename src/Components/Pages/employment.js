@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import * as actions from "../../actions/jobActions";
 import { connect } from 'react-redux';
 import _ from 'lodash';
-import Job from '../Job';
 import Card from '../Generic/card';
 
 import MetaTags from 'react-meta-tags';
