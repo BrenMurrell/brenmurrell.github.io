@@ -4,11 +4,7 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 
-class Button extends Component {
-    constructor(props) {
-        super(props);
-    }
-    
+class Button extends Component { 
     render() {
         const { title, link } = this.props;
         return(
@@ -17,7 +13,6 @@ class Button extends Component {
             </button>
         )
     }
-
 }
 Button.propTypes = {
     title: PropTypes.string,
