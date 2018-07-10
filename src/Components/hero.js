@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
+import Button from './Generic/button';
+
 import MetaTags from 'react-meta-tags';
 
 class Hero extends Component {
@@ -23,19 +25,9 @@ class Hero extends Component {
                             <h1 className="hero__title">Bren Murrell</h1>
                             <h3 className="hero__subtitle">Full Stack Web Developer</h3>
                             <div className="hero__buttons">
-                                <button className="c-btn c-btn--pri">
-                                    <Link className="c-btn__link" to={`/about`}>About Bren</Link>
-                                </button> 
-                                <button className="c-btn c-btn--pri">
-                                    <Link className="c-btn__link" to={`/case-studies`}>Case Studies</Link>
-                                </button>
-                                    
-                                {/* 
-                                    <button className="c-btn c-btn--pri">
-                                        <a className="c-btn__link" href="styleguide.html">Styleguide</a>
-                                    </button> 
-                                    
-                                */ }
+                                <Button title="About Bren" link="/about" />
+                                <Button title="Case Studies" link="/case-studies" />
+                                
                             </div>
                         </div>
                         
