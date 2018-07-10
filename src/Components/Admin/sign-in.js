@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { signIn, signOut } from "../../actions/signIn";
-import { Link } from 'react-router-dom';
 
 class SignIn extends Component {
     renderButton() {
