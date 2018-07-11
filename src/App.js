@@ -34,10 +34,6 @@ class App extends Component {
                         <Route exact path='/case-studies' component={CaseStudies} />
                         <Route exact path='/admin/sign-in' component={SignIn} />
                         <Route path='/admin' component={requireAuth(Dashboard)} />
-                        
-                        
-                        
-                        <Route component={Error404} />
                     </Switch>
                     
                 </div>
