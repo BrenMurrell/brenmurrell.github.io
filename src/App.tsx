@@ -1,18 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          New and improved brenmurrell.github.io coming soon!
-        </p>
-      </header>
-    </div>
-  );
+import Hero from './components/Hero';
+
+const App = () => {
+    return (
+        <div className="App">
+            <Hero />
+        </div>
+    );
 }
 
 export default App;
