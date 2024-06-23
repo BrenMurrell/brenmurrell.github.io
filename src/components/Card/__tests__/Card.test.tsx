@@ -1,9 +1,10 @@
 import { render } from "@testing-library/react";
-import Card, { CardProps } from "../Card";
+import Card from "../Card";
 
-const defaultProps: CardProps = {
+
+const defaultProps = {
     title: 'Card title',
-    children: [<p>Child 1</p>,<p>Child 2</p>] 
+    content: '<p>Child 1</p>,<p>Child 2</p>',
 }
 
 describe('Card', () => {
