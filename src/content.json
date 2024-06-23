@@ -1,0 +1,104 @@
+{
+    "pages": [
+        {
+            "title": "About",
+            "intro": "<p>Hi! I'm Bren, and I'm a Senior Front End Developer who is passionate about building robust, accessible software while empowering my teams to become strongly capable, compassionate developers.</p><p>I'm a software engineer. I'm a father. I'm a musician. I'm a photographer.</p>",
+            "sections": [
+                {
+                    "title": "What do I care most about?",
+                    "cards": [
+                        {
+                            "title": "People.",
+                            "content": "<p>As a developer, people are the heart of everything I do. I don't build software for the sake of building software. I build software to help people. <em>All</em> people. It's my duty as a developer to make sure that my deliverables are accessible to everyone through empathy and a deep understanding of WCAG standards. It's also my duty to build and enable capable, diverse and inclusive teams that can deliver robust, thoughtfully designed and rigoursouly tested projects.</p>"
+                        }
+                    ]
+                },
+                {
+                    "title": "What are my core skills?",
+                    "intro": "<p>First and foremost, I am a skilled front-end practioner with over 15 years experience working in web development, and over 25 years working in IT. Among my skills I pride myself on:</p><ul><li>Front-end development</li><li>Testing</li><li>Accessibility</li><li>Mentoring and leading teams of developers</li></ul>",
+                    "cards": [
+                        {
+                            "title": "Front-end development",
+                            "content": "<p>My happy place is working on the front end. This is the point I feel I can add the most value to the end user and realise the design vision of my team. I enjoy working with:</p><ul><li>JavaScript - particularly React</li><li>Accessible HTML</li><li>CSS to wizardy levels</li></ul>"
+                        },
+                        {
+                            "title": "Testing",
+                            "content": "<p>I enjoy breaking my code down into tiny, easy to test pieces which ensures a more robust end product. I'm familiar with and proficient in:</p><ul><li>Jest for functional unit testing</li><li>React Testing Library for component testing</li><li>Playwright for end-to-end and UI testing</li><li>Manual accessibility testing.</li></ul>"
+                        },
+                        {
+                            "title": "Accessibility",
+                            "content": "<p>As a neuro-diverse person in tech, I'm incredibly passionate about accessibiliity and this is at the front of my mind for all interfaces I work on. I'm constantly thinking about who might be interacting with my deployed code and how any visual, auditory or physical processing impairments might affect their application interactions.</p>"
+                        },
+                        {
+                            "title": "Mentoring and leading",
+                            "content": "<p>I might have mentioned it, but I <em>love</em> leading and growing people. I have a great variety of mentoring and teaching experience including:</p><ul><li>Mentoring junior and intermediate developers across a range of organisations</li><li>Creating a co-leading front-end education sessions at BNZ</li><li>Teaching JS & React development to new developers at Dev Academy Aoteroa</li><li>Facilitating learning for children in tech through Code Club Aoteroa</li><li>10 years leading, mentoring and teaching through the New Zealand Cadet Forces.</li></ul>"
+                        }
+                    ],
+                    "columns": 2
+                }
+            ]
+        },
+        {   
+                "title": "Projects",
+                "hidden": true,
+                "intro": "<p>Intro content for projects</p>",
+                "sections": [
+                    {
+                        "title": "Spotify-Amp",
+                        "content": "<p>Project 1 content</p>",
+                        "cards": [
+                            {
+                                "title": "Project 1",
+                                "content": "<p>Card 1 content</p>"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Project 2",
+                        "content": "<p>Project 2 content</p>",
+                        "cards": [
+                            {
+                                "title": "Project 2",
+                                "content": "<p>Card 1 content</p>"
+                            }
+                        ]
+                    }
+                ]
+        },
+        {
+            "title": "Work history",
+            "hidden": true,
+            "intro": "<p>Intro work history</p>",
+                "sections": [
+                    {
+                        "title": "BNZ",
+                        "content": "<p>Senior Front End Developer - Nov 2021 to July 2024</p>",
+                        "cards": [
+                            {
+                                "title": "Outline",
+                                "content": "<p>Card 1 content</p>"
+                            },
+                            {
+                                "title": "Responsiblities",
+                                "content": "<p>Card 1 content</p>"
+                            },
+                            {
+                                "title": "Acheivements",
+                                "content": "<p>Card 1 content</p>"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Dev Academy Aoteroa (formerly Enspiral Dev Academy)",
+                        "content": "<p>Project 2 content</p>",
+                        "cards": [
+                            {
+                                "title": "Project 2",
+                                "content": "<p>Card 1 content</p>"
+                            }
+                        ]
+                    }
+                ]
+        }
+    ]
+}
