@@ -1,13 +1,17 @@
-import './App.css';
+import './App.css'
+import { Outlet } from "react-router-dom"
+import Navigation from "./components/Navigation/Navigation"
+import { AppContext } from "./AppContext"
+import content from './content.json';
 
-import Hero from './components/Hero';
 
-const App = () => {
-    return (
-        <div className="App">
-            <Hero />
-        </div>
-    );
+function App() {
+  return (
+      <AppContext.Provider value={content}>
+        <Navigation />
+        <Outlet />
+      </AppContext.Provider>
+  )
 }
 
-export default App;
+export default App

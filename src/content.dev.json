@@ -1,0 +1,70 @@
+{
+    "content" : {
+        "pages": [
+            {
+                "title": "About",
+                "intro": ["<p>Hi! I'm Bren, and I'm a Senior Front End Developer who is passionate about building robust, accessible software while empowering my teams to become strongly capable, compassionate developers.</p><p>I'm a software engineer. I'm a father. I'm a musician. I'm a photographer.</p>"],
+                "sections": [
+                    {
+                        "title": "What do I care about?",
+                        "content": "<p>Intro content for what I care about</p>",
+                        "cards": [
+                            {
+                                "title": "People.",
+                                "content": "<p>As a developer, people are the heart of everything I do. I don't build software for the sake of building software. I build software to help people. <em>All</em> people. It's my duty as a developer to make sure that my deliverables are accessible to everyone through empathy and a deep understanding of WCAG standards. It's also my duty to build and enable capable, diverse and inclusive teams that can deliver robust, thoughtfully designed and rigoursouly tested projects.</p>"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "What are my core skills?",
+                        "intro": "<p>First and foremost, I am a skilled front-end practioner with over 15 years experience working in web development, and over 25 years working in IT. Among my skills I pride myself on:</p><ul><li>Front-end development</li><li>Testing</li><li>Accessibility</li><li>Mentoring and leading teams of developers</li></ul>",
+                        "cards": [
+                            {
+                                "title": "Front-end development",
+                                "content": "<p>Card 1 content</p>"
+                            },
+                            {
+                                "title": "Testing",
+                                "content": "<p>Card 1 content</p>"
+                            },
+                            {
+                                "title": "Accessibility",
+                                "content": "<p>Card 2 content</p>"
+                            },
+                            {
+                                "title": "Mentoring and leading",
+                                "content": "<p>Card 2 content</p>"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {   
+                    "title": "Projects",
+                    "intro": "<p>Intro content for projects</p>",
+                    "sections": [
+                        {
+                            "title": "Project 1",
+                            "content": "<p>Project 1 content</p>",
+                            "cards": [
+                                {
+                                    "title": "Project 1",
+                                    "content": "<p>Card 1 content</p>"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Project 2",
+                            "content": "<p>Project 2 content</p>",
+                            "cards": [
+                                {
+                                    "title": "Project 2",
+                                    "content": "<p>Card 1 content</p>"
+                                }
+                            ]
+                        }
+                    ]
+            }
+        ]
+    }
+}

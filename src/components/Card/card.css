@@ -1,0 +1,27 @@
+:root {
+    --card-gap: 2rem;
+}
+
+.cards {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: var(--card-gap);
+    column-gap: var(--card-gap);
+}
+
+.card {
+    background: var(--fg);
+    color: var(--bg);
+    padding: 1.5rem 1.5rem;
+    border-radius: 1.5rem;
+    width: 100%;
+}
+
+@media screen and (min-width: 64rem){
+    .cards--col-2 .card {
+        width: calc(50% - var(--card-gap) / 2);
+    }
+
+}

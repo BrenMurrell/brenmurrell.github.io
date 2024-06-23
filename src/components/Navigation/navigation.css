@@ -1,0 +1,22 @@
+.nav {}
+.nav__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg);
+    padding: 0;
+    display: flex;
+    border-bottom: 1px solid var(--fg);
+}
+.nav__header a {
+    padding: 1rem;
+    color: var(--fg);
+    text-decoration: none;
+}
+.nav__header .active {
+    background-color: var(--fg);
+    color: var(--bg);
+}
+
+
