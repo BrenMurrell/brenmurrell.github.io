@@ -5,31 +5,43 @@ exports[`Card renders 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <section>
+      <div
+        class="card"
+        id="card-title"
+      >
         <h3>
           Card title
         </h3>
-        <p>
-          Child 1
-        </p>
-        <p>
-          Child 2
-        </p>
-      </section>
+        <div>
+          <p>
+            Child 1
+          </p>
+          ,
+          <p>
+            Child 2
+          </p>
+        </div>
+      </div>
     </div>
   </body>,
   "container": <div>
-    <section>
+    <div
+      class="card"
+      id="card-title"
+    >
       <h3>
         Card title
       </h3>
-      <p>
-        Child 1
-      </p>
-      <p>
-        Child 2
-      </p>
-    </section>
+      <div>
+        <p>
+          Child 1
+        </p>
+        ,
+        <p>
+          Child 2
+        </p>
+      </div>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

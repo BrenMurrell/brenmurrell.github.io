@@ -1,9 +1,7 @@
 import useContent from "@/hooks/useContent";
-import React, { useEffect, useState } from 'react';
 import { type Page } from "../../../content";
 import useHtmlParser from "@/hooks/useHtmlParser";
 import Section from "./Section";
-import { useLocation } from 'react-router-dom';
 
 type PageProps = {
     searchString: string;

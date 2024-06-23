@@ -5,31 +5,55 @@ exports[`Home renders 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <h1>
-        Bren Murrell
-      </h1>
-      <h2>
-        Senior Front-End Developer.
-        <br />
-        Accessibility Advocate.
-        <br />
-        Grower of people.
-        <br />
-      </h2>
+      <div
+        class="home"
+      >
+        <div
+          class="home__content"
+        >
+          <h1>
+            Bren Murrell
+          </h1>
+          <h2>
+            Senior Front-End Developer
+          </h2>
+          <h2>
+            Accessibility Advocate
+          </h2>
+          <h2>
+            Grower of people
+          </h2>
+          <h2>
+            Your next hire.
+          </h2>
+        </div>
+      </div>
     </div>
   </body>,
   "container": <div>
-    <h1>
-      Bren Murrell
-    </h1>
-    <h2>
-      Senior Front-End Developer.
-      <br />
-      Accessibility Advocate.
-      <br />
-      Grower of people.
-      <br />
-    </h2>
+    <div
+      class="home"
+    >
+      <div
+        class="home__content"
+      >
+        <h1>
+          Bren Murrell
+        </h1>
+        <h2>
+          Senior Front-End Developer
+        </h2>
+        <h2>
+          Accessibility Advocate
+        </h2>
+        <h2>
+          Grower of people
+        </h2>
+        <h2>
+          Your next hire.
+        </h2>
+      </div>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
