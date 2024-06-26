@@ -1,7 +1,7 @@
-import useContent from "@/hooks/useContent";
+import useContent from "../../hooks/useContent";
 import { type Page } from "../../../content";
-import useHtmlParser from "@/hooks/useHtmlParser";
-import Section from "./Section";
+import useHtmlParser from "../../hooks/useHtmlParser";
+import Section from "../Section/Section";
 
 type PageProps = {
     searchString: string;
