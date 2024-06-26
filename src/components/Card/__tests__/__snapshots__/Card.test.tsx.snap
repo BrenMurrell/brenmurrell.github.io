@@ -16,7 +16,9 @@ exports[`Card renders 1`] = `
           <p>
             Child 1
           </p>
-          ,
+          <button>
+            Click me.
+          </button>
           <p>
             Child 2
           </p>
@@ -36,7 +38,9 @@ exports[`Card renders 1`] = `
         <p>
           Child 1
         </p>
-        ,
+        <button>
+          Click me.
+        </button>
         <p>
           Child 2
         </p>

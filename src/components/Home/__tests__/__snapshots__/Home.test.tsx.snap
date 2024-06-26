@@ -15,7 +15,7 @@ exports[`Home renders 1`] = `
             Bren Murrell
           </h1>
           <h2>
-            Senior Front-End Developer
+            Senior Front End Developer
           </h2>
           <h2>
             Accessibility Advocate
@@ -41,7 +41,7 @@ exports[`Home renders 1`] = `
           Bren Murrell
         </h1>
         <h2>
-          Senior Front-End Developer
+          Senior Front End Developer
         </h2>
         <h2>
           Accessibility Advocate

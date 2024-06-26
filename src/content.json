@@ -67,34 +67,41 @@
         },
         {
             "title": "Work history",
-            "hidden": true,
             "intro": "<p>Intro work history</p>",
                 "sections": [
                     {
                         "title": "BNZ",
-                        "content": "<p>Senior Front End Developer - Nov 2021 to July 2024</p>",
+                        "content": "<p>Senior Front End Developer - November 2021 to July 2024</p>",
                         "cards": [
                             {
                                 "title": "Outline",
-                                "content": "<p>Card 1 content</p>"
+                                "content": "<p>Originally a 6 month contract, I worked with BNZ as a Senior Front End Developer across multiple teams over more than two and a half years. </p>"
                             },
                             {
                                 "title": "Responsiblities",
-                                "content": "<p>Card 1 content</p>"
+                                "content": "<ul><li>Replacement of \"legacy\" banking systems with React applications</li><li>Building React applications as micro-frontends in a shell / mini-app architecture</li><li>Contributing to both mini-apps and the shell application</li><li>Tesing of all code using Jest, Testing Library and Playwright</li><lii>Improving code quality and solving technical debt using Sonarqube</li><li>Advocating for and promoting self-directed hackathon discovery days</li><li>Mentoring and training developers in React development</li><li>Mentoring and training developers in unit, end-to-end and user interface testing</li></ul>"
                             },
                             {
                                 "title": "Acheivements",
-                                "content": "<p>Card 1 content</p>"
+                                "content": "<ul><li>Developing and co-leading structured front end learning sessions for peers</li><li>Research and planning implementation of MSW (Mock Service Worker) for development, unit, UI & E2E testing</li><li>Advocating for self-directed hackathon days, given technical staff room for growth</li></ul>"
                             }
                         ]
                     },
                     {
                         "title": "Dev Academy Aoteroa (formerly Enspiral Dev Academy)",
-                        "content": "<p>Project 2 content</p>",
+                        "content": "<p>Lead Teacher - October 2020 - Nov 2021</p>",
                         "cards": [
                             {
-                                "title": "Project 2",
-                                "content": "<p>Card 1 content</p>"
+                                "title": "Outline",
+                                "content": "<p>For 12 months I trained and mentored around 100 students in their first step to becoming junior developers. This was an incredibly special role for me due to Dev Academy's strong focus on soft skills which enabled me to learn so much more about people and about myself.</p>"
+                            },
+                            {
+                                "title": "Responsiblities",
+                                "content": "<ul><li>Creating and delivering daily training sessions</li><li>Facilitating personal and professional development for students</li><li>Just-in-time professional development in order to pass on skills to students</li></ul>"
+                            },
+                            {
+                                "title": "Acheivements",
+                                "content": "<ul><li>Introducing CSS to the curriculum</li><li>Contributing positively to the careers of so many developers</li></ul>"
                             }
                         ]
                     }
