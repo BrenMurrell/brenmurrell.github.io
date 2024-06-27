@@ -16,6 +16,7 @@ export default {
     '!**/coverage/**',
     '!**/*.d.ts',
     '!**/*.config.*',
+    '!**/*.test.*',
   ],
 
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
