@@ -10,7 +10,7 @@ jobs:
   build:
     steps: 
     - name: Install dependencies
-        run: yarn
+      run: yarn
     - name: Build
       run: yarn build
     - name: Test
