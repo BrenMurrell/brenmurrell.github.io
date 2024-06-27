@@ -7,6 +7,14 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
+  build:
+    steps: 
+    - name: Install dependencies
+        run: yarn
+      - name: Build
+        run: yarn build
+      - name: Test
+        run: yarn test --coverage
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
