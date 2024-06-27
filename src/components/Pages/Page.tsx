@@ -7,7 +7,7 @@ type PageProps = {
     searchString: string;
 }
 
-const Page = ({ searchString }: PageProps) => {
+const Page:React.FC<PageProps> = ({ searchString }) => {
     const pageContent = useContent(searchString);
     const { title, intro, sections } = pageContent;
     
