@@ -1,4 +1,5 @@
 {
+    "isLoading": false,
     "pages": [
         {
             "title": "About",

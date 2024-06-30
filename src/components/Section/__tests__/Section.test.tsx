@@ -1,7 +1,6 @@
 import Section from "../Section";
 import TestWrapper from '../../TestWrapper';
 import { render, screen } from "@testing-library/react";
-import { Card } from "../../../../content";
 
 jest.mock('../../Card/Card', () => () => <div data-testid="card">Card</div>)
 
