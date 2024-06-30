@@ -1,4 +1,5 @@
 import { createContext } from "react";
-import { Content } from "../content";
+import { AppActions } from "./reducers/reducer";
 
-export const AppContext = createContext<Content>({ pages: []});
+export const AppContext = createContext<Content>({ pages: [], isLoading: true });
+export const AppDispatchContext = createContext<React.Dispatch<AppActions>>(() => {});

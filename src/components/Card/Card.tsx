@@ -1,6 +1,5 @@
 import './card.css';
 import useString from "../../hooks/useString";
-import { type Card } from "../../../content";
 import useHtmlParser from "../../hooks/useHtmlParser";
 
 

@@ -1,24 +1,35 @@
+import { useLocation } from "react-router-dom";
 import useContent from "../../hooks/useContent";
-import { type Page } from "../../../content";
 import useHtmlParser from "../../hooks/useHtmlParser";
+// import Section from "../Section/Section";
+import { useContext, useEffect, useState } from "react";
+import { AppContext } from "../../AppContext";
 import Section from "../Section/Section";
+import useString from "../../hooks/useString";
 
-type PageProps = {
-    searchString: string;
-}
+const Page:React.FC = () => {
+    const { pages } = useContext(AppContext);
+    const { slug } = useString();
+    const [ pageContent, setPageContent ] = useState<Page>({} as Page);
 
-const Page:React.FC<PageProps> = ({ searchString }) => {
-    const pageContent = useContent(searchString);
-    const { title, intro, sections } = pageContent;
-    
+    const path = useLocation().pathname;
+
+    const title = pageContent?.title;
+    const intro = pageContent?.intro;
+    const sections = pageContent?.sections;
+
+    useEffect(() => {
+        setPageContent(pages?.find((page) => page.slug === path));
+        // const setPageContent(useContent(path))
+    }, [pages]);
     return (
         <section>
             <header>
-                <h1>{title}</h1>
-                {useHtmlParser({ html: intro})}
+                <h1>{title ? title : ''}</h1>
+                {useHtmlParser({ html: intro ? intro : ''})}
             </header>
-            {sections && sections.map((section, index) => (
-                <Section key={index} {...section}/>
+            {sections && sections.map((section) => (
+                <Section key={slug(section?.title)} {...section}/>
             ))}
         </section>
     );

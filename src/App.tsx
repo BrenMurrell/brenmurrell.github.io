@@ -1,36 +1,37 @@
-import './App.css'
-import { Outlet } from "react-router-dom"
-import Navigation from "./components/Navigation/Navigation"
-import { initializeApp } from "firebase/app";
-import { firebaseConfig } from "./firebase.config";
-
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-import { useEffect, useState } from "react";
-import { FirebaseContext } from "./contexts/FirebaseContext";
-import type { DocumentData } from "firebase/firestore";
+import './App.css';
+import { Outlet } from "react-router-dom";
+import Navigation from "./components/Navigation/Navigation";
+import { AppContext, AppDispatchContext } from "./AppContext";
+import reducer, { initialState } from './reducers/reducer';
+import { useContext, useEffect, useReducer } from 'react';
+import { setAllPages } from './actions/pages';
+import { setLoadingState } from './actions/appState';
 
 function App() {
-  const app = initializeApp(firebaseConfig);
-  const [thePages, setThePages] = useState<DocumentData>({});
-
-  const fetchContent = async () => {
-    const db = getFirestore(app);
-    const pagesCollection = collection(db, 'pages');
-    const pagesSnapshot = await getDocs(pagesCollection);
-    const pagesList = pagesSnapshot.docs.map(doc => doc.data());
-    pagesList.sort((a, b) => a.order - b.order);
-    setThePages(pagesList);
-  }
+  // const state = useContext(AppContext);
+  // const [state, dispatch] = useReducer(reducer({} as Content);
+  // const [state, dispatch] = useReducer(reducer, { pages: [], isLoading: true });
+  const [ state, dispatch ] = useReducer(reducer, initialState as Content);
+  const { isLoading } = useContext(AppContext);
   
   useEffect(() => {
-    fetchContent();
+    setAllPages(dispatch)
+      .then(() => setLoadingState(dispatch, false));
   }, []);
 
   return (
-    <FirebaseContext.Provider value={thePages}>
-        <Navigation />
-        <Outlet />
-    </FirebaseContext.Provider>
+    <AppContext.Provider value={state}>
+        <AppDispatchContext.Provider value={dispatch}>
+          {isLoading && (
+            <>
+              <Navigation />
+              <Outlet />
+            </>
+          )}
+        </AppDispatchContext.Provider>
+    </AppContext.Provider>
+    
+    
   )
 }
 

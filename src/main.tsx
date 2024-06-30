@@ -1,6 +1,5 @@
 import React from 'react'
-import { AppContext } from "./AppContext"
-import content from 'content.json';
+// import content from 'content.json';
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
@@ -14,8 +13,6 @@ const router = createHashRouter(
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>  
-      <AppContext.Provider value={content}>
-        <RouterProvider router={router} />
-      </AppContext.Provider>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
