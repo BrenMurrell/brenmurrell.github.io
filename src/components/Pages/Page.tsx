@@ -1,7 +1,5 @@
 import { useLocation } from "react-router-dom";
-import useContent from "../../hooks/useContent";
 import useHtmlParser from "../../hooks/useHtmlParser";
-// import Section from "../Section/Section";
 import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../AppContext";
 import Section from "../Section/Section";

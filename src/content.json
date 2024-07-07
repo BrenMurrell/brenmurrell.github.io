@@ -3,6 +3,7 @@
     "pages": [
         {
             "title": "About",
+            "slug": "/about",
             "intro": "<p>Hi! I'm Bren, and I'm a Senior Front End Developer who is passionate about building robust, accessible software while empowering my teams to become strongly capable, compassionate developers.</p><p>I'm a software engineer. I'm a father. I'm a musician. I'm a photographer.</p>",
             "sections": [
                 {
@@ -41,7 +42,8 @@
         },
         {   
                 "title": "Projects",
-                "hidden": true,
+                "slug": "/projects",
+                "isHidden": true,
                 "intro": "<p>Intro content for projects</p>",
                 "sections": [
                     {
@@ -68,6 +70,7 @@
         },
         {
             "title": "Work history",
+            "slug": "/work-history",
             "intro": "<p>Intro work history</p>",
                 "sections": [
                     {

@@ -7,9 +7,9 @@ import Home from "./components/Home/Home"
 const AppRoutes = (
     <Route element={<App />}>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<Page searchString="About" key={"about"} />} />
-        <Route path="/work" element={<Page searchString="Work" key={"work"} />} />
-        <Route path="/projects" element={<Page searchString="Projects" key={"projects"} />} />
+        <Route path="/about" element={<Page key={"about"} />} />
+        <Route path="/work" element={<Page key={"work"} />} />
+        <Route path="/projects" element={<Page key={"projects"} />} />
     </Route>
 )
 

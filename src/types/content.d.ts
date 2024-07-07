@@ -1,7 +1,7 @@
 type Content = {
-    pages: PageContent[] | DocumentData[];
+    pages?: PageContent[] | DocumentData[];
     isLoading: boolean;
-};
+}
 
 type Card = {
     title: string,
@@ -13,12 +13,11 @@ type Section = {
     columns?: number;
     content?: string | undefined;
     title: string;
-};
+}
 
 type Page = {
     title: string;
     intro?: string | undefined;
     sections?: Section[];
     hidden?: boolean;
-};
-
+}

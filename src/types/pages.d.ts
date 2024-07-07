@@ -1,7 +1,7 @@
-interface PageContent extends DocCont {
+interface PageContent {
     title: string;
     slug: string,
     intro?: string | undefined;
     sections?: Section[];
-    hidden?: boolean;
-};
+    isHidden?: boolean;
+}

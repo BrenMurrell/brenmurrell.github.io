@@ -1,0 +1,282 @@
+[{
+    "document": {
+      "name": "projects/bm-github-io/databases/(default)/documents/pages/about",
+      "fields": {
+        "intro": {
+          "stringValue": "\u003cp\u003eHi! I'm Brenegade, and I'm a Senior Front End Developer who is passionate about building robust, accessible software while empowering my teams to become strongly capable, compassionate developers.\u003c/p\u003e\u003cp\u003eI'm a software engineer. I'm a father. I'm a musician. I'm a photographer.\u003c/p\u003e"
+        },
+        "title": {
+          "stringValue": "About"
+        },
+        "order": {
+          "integerValue": "2"
+        },
+        "slug": {
+          "stringValue": "/about"
+        },
+        "sections": {
+          "arrayValue": {
+            "values": [
+              {
+                "mapValue": {
+                  "fields": {
+                    "cards": {
+                      "arrayValue": {
+                        "values": [
+                          {
+                            "mapValue": {
+                              "fields": {
+                                "title": {
+                                  "stringValue": "People."
+                                },
+                                "content": {
+                                  "stringValue": "\u003cp\u003eAs a developer, people are the heart of everything I do. I don't build software for the sake of building software. I build software to help people. \u003cem\u003eAll\u003c/em\u003e people. It's my duty as a developer to make sure that my deliverables are accessible to everyone through empathy and a deep understanding of WCAG standards. It's also my duty to build and enable capable, diverse and inclusive teams that can deliver robust, thoughtfully designed and rigoursouly tested projects.\u003c/p\u003e"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "title": {
+                      "stringValue": "What do I care about most?"
+                    }
+                  }
+                }
+              },
+              {
+                "mapValue": {
+                  "fields": {
+                    "cards": {
+                      "arrayValue": {
+                        "values": [
+                          {
+                            "mapValue": {
+                              "fields": {
+                                "title": {
+                                  "stringValue": "Front-end development"
+                                },
+                                "content": {
+                                  "stringValue": "\u003cp\u003eMy happy place is working on the front end. This is the point I feel I can add the most value to the end user and realise the design vision of my team. I enjoy working with:\u003c/p\u003e\u003cul\u003e\u003cli\u003eJavaScript - particularly React\u003c/li\u003e\u003cli\u003eAccessible HTML\u003c/li\u003e\u003cli\u003eCSS to wizardy levels\u003c/li\u003e\u003c/ul\u003e"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "mapValue": {
+                              "fields": {
+                                "title": {
+                                  "stringValue": "Testing"
+                                },
+                                "content": {
+                                  "stringValue": "\u003cp\u003eI enjoy breaking my code down into tiny, easy to test pieces which ensures a more robust end product. I'm familiar with and proficient in:\u003c/p\u003e\u003cul\u003e\u003cli\u003eJest for functional unit testing\u003c/li\u003e\u003cli\u003eReact Testing Library for component testing\u003c/li\u003e\u003cli\u003ePlaywright for end-to-end and UI testing\u003c/li\u003e\u003cli\u003eManual accessibility testing.\u003c/li\u003e\u003c/ul\u003e"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "mapValue": {
+                              "fields": {
+                                "title": {
+                                  "stringValue": "Accessibility"
+                                },
+                                "content": {
+                                  "stringValue": "\u003cp\u003eAs a neuro-diverse person in tech, I'm incredibly passionate about accessibiliity and this is at the front of my mind for all interfaces I work on. I'm constantly thinking about who might be interacting with my deployed code and how any visual, auditory or physical processing impairments might affect their application interactions.\u003c/p\u003e"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "mapValue": {
+                              "fields": {
+                                "title": {
+                                  "stringValue": "Mentoring and leading"
+                                },
+                                "content": {
+                                  "stringValue": "\u003cp\u003eI might have mentioned it, but I \u003cem\u003elove\u003c/em\u003e leading and growing people. I have a great variety of mentoring and teaching experience including:\u003c/p\u003e\u003cul\u003e\u003cli\u003eMentoring junior and intermediate developers across a range of organisations\u003c/li\u003e\u003cli\u003eCreating a co-leading front-end education sessions at BNZ\u003c/li\u003e\u003cli\u003eTeaching JS &amp; React development to new developers at Dev Academy Aoteroa\u003c/li\u003e\u003cli\u003eFacilitating learning for children in tech through Code Club Aoteroa\u003c/li\u003e\u003cli\u003e10 years leading, mentoring and teaching through the New Zealand Cadet Forces.\u003c/li\u003e\u003c/ul\u003e"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "columns": {
+                      "integerValue": "2"
+                    },
+                    "title": {
+                      "stringValue": "What are my core skills?"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "createTime": "2024-06-28T00:16:20.520267Z",
+      "updateTime": "2024-06-30T05:10:35.150502Z"
+    },
+    "readTime": "2024-07-03T19:39:18.346586Z"
+  }
+  ,
+  {
+    "document": {
+      "name": "projects/bm-github-io/databases/(default)/documents/pages/home",
+      "fields": {
+        "title": {
+          "stringValue": "Home"
+        },
+        "order": {
+          "integerValue": "1"
+        },
+        "slug": {
+          "stringValue": "/"
+        }
+      },
+      "createTime": "2024-06-28T00:17:04.386599Z",
+      "updateTime": "2024-06-30T03:52:08.016456Z"
+    },
+    "readTime": "2024-07-03T19:39:18.346586Z"
+  }
+  ,
+  {
+    "document": {
+      "name": "projects/bm-github-io/databases/(default)/documents/pages/work",
+      "fields": {
+        "title": {
+          "stringValue": "Work History"
+        },
+        "isHidden": {
+          "booleanValue": false
+        },
+        "order": {
+          "integerValue": "3"
+        },
+        "intro": {
+          "stringValue": "\u003cp\u003eWhat sort of work have I done up until now?\u003c/p\u003e"
+        },
+        "slug": {
+          "stringValue": "/work"
+        },
+        "sections": {
+          "arrayValue": {
+            "values": [
+              {
+                "mapValue": {
+                  "fields": {
+                    "cards": {
+                      "arrayValue": {
+                        "values": [
+                          {
+                            "mapValue": {
+                              "fields": {
+                                "title": {
+                                  "stringValue": "Outline"
+                                },
+                                "content": {
+                                  "stringValue": "\u003cp\u003eOriginally a 6 month contract, I worked with BNZ as a Senior Front End Developer across multiple teams over more than two and a half years.\u003c/p\u003e"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "mapValue": {
+                              "fields": {
+                                "title": {
+                                  "stringValue": "Responsibilities"
+                                },
+                                "content": {
+                                  "stringValue": "\u003cul\u003e\u003cli\u003eReplacement of \"legacy\" banking systems with React applications\u003c/li\u003e\u003cli\u003eBuilding React applications as micro-frontends in a shell / mini-app architecture\u003c/li\u003e\u003cli\u003eContributing to both mini-apps and the shell application\u003c/li\u003e\u003cli\u003eTesing of all code using Jest, Testing Library and Playwright\u003c/li\u003e\u003clii\u003eImproving code quality and solving technical debt using Sonarqube\u003cli\u003eAdvocating for and promoting self-directed hackathon discovery days\u003c/li\u003e\u003cli\u003eMentoring and training developers in React development\u003c/li\u003e\u003cli\u003eMentoring and training developers in unit, end-to-end and user interface testing\u003c/li\u003e\u003c/lii\u003e\u003c/ul\u003e"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "mapValue": {
+                              "fields": {
+                                "title": {
+                                  "stringValue": "Achievements"
+                                },
+                                "content": {
+                                  "stringValue": "\u003cul\u003e\u003cli\u003eDeveloping and co-leading structured front end learning sessions for peers\u003c/li\u003e\u003cli\u003eResearch and planning implementation of MSW (Mock Service Worker) for development, unit, UI &amp; E2E testing\u003c/li\u003e\u003cli\u003eAdvocating for self-directed hackathon days, given technical staff room for growth\u003c/li\u003e\u003c/ul\u003e"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "title": {
+                      "stringValue": "BNZ"
+                    },
+                    "content": {
+                      "stringValue": "Senior Front End Developer - November 2021 to July 2024"
+                    }
+                  }
+                }
+              },
+              {
+                "mapValue": {
+                  "fields": {
+                    "cards": {
+                      "arrayValue": {
+                        "values": [
+                          {
+                            "mapValue": {
+                              "fields": {
+                                "title": {
+                                  "stringValue": "Outline"
+                                },
+                                "content": {
+                                  "stringValue": "\u003cp\u003eFor 12 months I trained and mentored around 100 students in their first step to becoming junior developers. This was an incredibly special role for me due to Dev Academy's strong focus on soft skills which enabled me to learn so much more about people and about myself.\u003c/p\u003e"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "mapValue": {
+                              "fields": {
+                                "title": {
+                                  "stringValue": "Responsibilities"
+                                },
+                                "content": {
+                                  "stringValue": "\u003cul\u003e\u003cli\u003eCreating and delivering daily training sessions\u003c/li\u003e\u003cli\u003eFacilitating personal and professional development for students\u003c/li\u003e\u003cli\u003eJust-in-time professional development in order to pass on skills to students\u003c/li\u003e\u003cli\u003ePersonally guiding subsets of each cohort through 1-on-1 mentoring covering both technical skills and personal wellbeing\u003c/li\u003e\u003c/ul\u003e"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "mapValue": {
+                              "fields": {
+                                "title": {
+                                  "stringValue": "Achievements"
+                                },
+                                "content": {
+                                  "stringValue": "\u003cul\u003e\u003cli\u003eIntroducing CSS to the curriculum\u003c/li\u003e\u003cli\u003eContributing positively to the careers of so many developers\u003c/li\u003e\u003c/ul\u003e"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    "title": {
+                      "stringValue": "Dev Academy Aoteroa (formerly Enspiral Dev Academy)"
+                    },
+                    "content": {
+                      "stringValue": "Lead Teacher - October 2020 - Nov 2021"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "createTime": "2024-06-28T00:15:06.213834Z",
+      "updateTime": "2024-06-30T05:17:21.000330Z"
+    },
+    "readTime": "2024-07-03T19:39:18.346586Z"
+  }
+  ]
