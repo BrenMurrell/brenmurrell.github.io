@@ -19,11 +19,11 @@
                     "cards": [
                         {
                             "title": "Front-end development",
-                            "content": "<p>My happy place is working on the front end. This is the point I feel I can add the most value to the end user and realise the design vision of my team. I enjoy working with:</p><ul><li>JavaScript - particularly React</li><li>Accessible HTML</li><li>CSS to wizardy levels</li></ul>"
+                            "content": "<p>My happy place is working on the front end. This is the point I feel I can add the most value to the end user and realise the design vision of my team. I enjoy working with:</p><ul><li>JavaScript & TypeScript</li><li>React, Vue, React Context, Redux, React Query & Pinia</li><li>Accessible HTML</li><li>CSS to wizardy levels</li></ul>"
                         },
                         {
                             "title": "Testing",
-                            "content": "<p>I enjoy breaking my code down into tiny, easy to test pieces which ensures a more robust end product. I'm familiar with and proficient in:</p><ul><li>Jest for functional unit testing</li><li>React Testing Library for component testing</li><li>Playwright for end-to-end and UI testing</li><li>Manual accessibility testing.</li></ul>"
+                            "content": "<p>I enjoy breaking my code down into tiny, easy to test pieces which ensures a more robust end product. I'm familiar with and proficient in:</p><ul><li>Jest for functional unit testing</li><li>React Testing Library for component testing</li><li>Playwright & Cypress for end-to-end and UI testing</li><li>Manual accessibility testing.</li></ul>"
                         },
                         {
                             "title": "Accessibility",
@@ -67,8 +67,26 @@
         },
         {
             "title": "Work history",
-            "intro": "<p>Intro work history</p>",
+            "intro": "<p>I've worked in tech for a quarter century now, honing my skills in general development, database development and administration and have found my happy place in the Front End Web space. Here's a quick run down of my most recent roles.</p>",
                 "sections": [
+                    {
+                        "title": "Storypark",
+                        "content": "Senior Front End Engineer - July 2024 to present",
+                        "cards": [
+                            {
+                                "title": "Outline",
+                                "content": "<p>Storypark is a platform that connects teachers, parents and children in early childhood education. I'm currently working as a Senior Front End Engineer, building and maintaining the front end of the platform.</p>"
+                            },
+                            {
+                                "title": "Responsiblities",
+                                "content": "<ul><li>Building and maintaining the front end of the Storypark platform using Vue, Vuetify and Pinia</li><li>Working with a team of engineers, designers and product managers to deliver new features and improvements</li><li>Expanding the Storypark Pattern Library to aid other developers in building new features and migrating existing features from Rails</li><li>Ensuring the platform is accessible to all users</li><li>Ensuring the platform is tested to a high standard</li></ul>"
+                            },
+                            {
+                                "title": "Acheivements",
+                                "content": "<ul><li>Improving unit test coverage throught the Single Page App codebase</li><li>Improving the accessibility of the platform through incremental changes to it's pattern library</li></ul>"
+                            }
+                        ]
+                    },
                     {
                         "title": "BNZ",
                         "content": "<p>Senior Front End Developer - November 2021 to July 2024</p>",
