@@ -2,24 +2,24 @@
     "pages": [
         {
             "title": "About",
-            "intro": "<p>Hi! I'm Bren, and I'm a Senior Front End Developer who is passionate about building robust, accessible software while empowering my teams to become strongly capable, compassionate developers.</p><p>I'm a software engineer. I'm a father. I'm a musician. I'm a photographer.</p>",
+            "intro": "<p>Hi! I'm Bren, and I'm a Senior Front End Developer. I'm passionate about building robust, accessible software while empowering my teams to become strongly capable, compassionate developers.</p><p>I'm a software engineer. I'm a father. I'm neuro-divergent. I'm a musician. I'm a photographer.</p>",
             "sections": [
                 {
                     "title": "What do I care most about?",
                     "cards": [
                         {
                             "title": "People.",
-                            "content": "<p>As a developer, people are the heart of everything I do. I don't build software for the sake of building software. I build software to help people. <em>All</em> people. It's my duty as a developer to make sure that my deliverables are accessible to everyone through empathy and a deep understanding of WCAG standards. It's also my duty to build and enable capable, diverse and inclusive teams that can deliver robust, thoughtfully designed and rigoursouly tested projects.</p>"
+                            "content": "<p>As a developer, people are the heart of everything I do. I don't build software for the sake of building software. I build software to help people. <em>All</em> people. It's my duty as a developer to make sure that my deliverables are accessible to everyone through empathy and a deep understanding of WCAG standards. It's also my duty to build and enable capable, diverse and inclusive teams that can deliver robust, thoughtfully designed and rigoursly tested projects.</p>"
                         }
                     ]
                 },
                 {
                     "title": "What are my core skills?",
-                    "intro": "<p>First and foremost, I am a skilled front-end practioner with over 15 years experience working in web development, and over 25 years working in IT. Among my skills I pride myself on:</p><ul><li>Front-end development</li><li>Testing</li><li>Accessibility</li><li>Mentoring and leading teams of developers</li></ul>",
+                    "content": "<p>First and foremost, I am a skilled front-end practitioner with over 15 years experience working in web development, and over 25 years working in IT. Among my skills I pride myself on:</p><ul><li>Front-end development</li><li>Testing</li><li>Accessibility</li><li>Mentoring and leading teams of developers</li></ul>",
                     "cards": [
                         {
                             "title": "Front-end development",
-                            "content": "<p>My happy place is working on the front end. This is the point I feel I can add the most value to the end user and realise the design vision of my team. I enjoy working with:</p><ul><li>JavaScript & TypeScript</li><li>React, Vue, React Context, Redux, React Query & Pinia</li><li>Accessible HTML</li><li>CSS to wizardy levels</li></ul>"
+                            "content": "<p>My happy place is working on the front end. This is the point where I can add the most value to the end user and realise the design vision of my team. I enjoy working with:</p><ul><li>JavaScript & TypeScript</li><li>React, Vue, React Context, Redux, React Query & Pinia</li><li>Accessible HTML</li><li>CSS to wizardry levels</li></ul>"
                         },
                         {
                             "title": "Testing",
@@ -27,14 +27,36 @@
                         },
                         {
                             "title": "Accessibility",
-                            "content": "<p>As a neuro-diverse person in tech, I'm incredibly passionate about accessibiliity and this is at the front of my mind for all interfaces I work on. I'm constantly thinking about who might be interacting with my deployed code and how any visual, auditory or physical processing impairments might affect their application interactions.</p>"
+                            "content": "<p>As a neuro-diverse person in tech, I'm incredibly passionate about accessibility and this is at the front of my mind for all interfaces I work on. I'm constantly thinking about who might be interacting with my deployed code and how any visual, auditory or physical processing impairments might affect their application interactions.</p>"
                         },
                         {
                             "title": "Mentoring and leading",
-                            "content": "<p>I might have mentioned it, but I <em>love</em> leading and growing people. I have a great variety of mentoring and teaching experience including:</p><ul><li>Mentoring junior and intermediate developers across a range of organisations</li><li>Creating a co-leading front-end education sessions at BNZ</li><li>Teaching JS & React development to new developers at Dev Academy Aoteroa</li><li>Facilitating learning for children in tech through Code Club Aoteroa</li><li>10 years leading, mentoring and teaching through the New Zealand Cadet Forces.</li></ul>"
+                            "content": "<p>I might have mentioned it, but I <em>love</em> leading and growing people. I have a great variety of mentoring and teaching experience including:</p><ul><li>Mentoring junior and intermediate developers across a range of organisations</li><li>Creating a co-leading front-end education sessions at BNZ</li><li>Teaching JS & React development to new developers at Dev Academy Aotearoa</li><li>Facilitating learning for children in tech through Code Club Aotearoa</li><li>10 years leading, mentoring and teaching through the New Zealand Cadet Forces.</li></ul>"
                         }
                     ],
                     "columns": 2
+                },
+                {
+                    "title": "What am I looking for?",
+                    "cards": [
+                        {
+                            "title": "",
+                            "content": "<p>Searching for perfection is madness. I know this to be true, but my near-perfect role would be one where I get to focus on developer experience (DX) as well as user experience (UX). It would include:</p><ul><li><strong>Building and maintaining design systems</strong> - At the heart of every great front-end is a solid design system. This space affords me the opportunity to improve UX and accessibility (A11y) while bringing a more cohesive and consistent feel to user interfaces. It also helps to improve DX and make life easier for my peers.</li><li><strong>Testing, testing and more testing</strong> - I love a good unit test, especially when those unit tests are strongly focused around A11y. This is why I love Testing Library so much!</li><li><strong>A cohesive plan</strong> - I work best when there's a plan in place, or where I have time to help make a plan. \"Rushing to market\" or making hasty decisions can lead to unnecessary accumulation of technical debt - which never leads to a good time. I feel happiest when living somewhere between sensible levels of pragmatism and crystal clear direction.</li>"
+                        }
+                    ]
+                },
+                {
+                    "title": "What else can I tell you?",
+                    "cards": [
+                        {
+                            "title": "",
+                            "content": "<p>I mentioned neuro-divergence. I was diagnosed with ADHD in 2023 and I believe this to be a superpower. It influences my ability to dive deep, learn rapidly, and to empathise with users of all abilities. It's also a challenge some days - though I feel fairly self-aware of my limitations. Specifically, my auditory processing is probably my biggest weakness. I always hear what is being said, but sometimes just need some time to process before giving a complete response. The infamous \"are there any questions\" can sometimes lead to me looking a bit like a deer in the headlights. I like being given the opportunity to step away and process information before swinging back around with questions or opinions.</p>"
+                        }
+                    ]
+                },
+                {
+                    "title": "Do you think I'd be a good fit for your team?",
+                    "content": "<p>Let's chat! I'm always open to a conversation about new opportunities. I love meeting new people and learning about their experiences. If you think I might be a good fit for your team, please reach out!</p>"
                 }
             ]
         },
@@ -82,7 +104,7 @@
                                 "content": "<ul><li>Building and maintaining the front end of the Storypark platform using Vue, Vuetify and Pinia</li><li>Working with a team of engineers, designers and product managers to deliver new features and improvements</li><li>Expanding the Storypark Pattern Library to aid other developers in building new features and migrating existing features from Rails</li><li>Ensuring the platform is accessible to all users</li><li>Ensuring the platform is tested to a high standard</li></ul>"
                             },
                             {
-                                "title": "Acheivements",
+                                "title": "Achievements",
                                 "content": "<ul><li>Improving unit test coverage throught the Single Page App codebase</li><li>Improving the accessibility of the platform through incremental changes to it's pattern library</li></ul>"
                             }
                         ]
@@ -97,7 +119,7 @@
                             },
                             {
                                 "title": "Responsiblities",
-                                "content": "<ul><li>Replacement of \"legacy\" banking systems with React applications</li><li>Building React applications as micro-frontends in a shell / mini-app architecture</li><li>Contributing to both mini-apps and the shell application</li><li>Tesing of all code using Jest, Testing Library and Playwright</li><lii>Improving code quality and solving technical debt using Sonarqube</li><li>Advocating for and promoting self-directed hackathon discovery days</li><li>Mentoring and training developers in React development</li><li>Mentoring and training developers in unit, end-to-end and user interface testing</li></ul>"
+                                "content": "<ul><li>Replacement of \"legacy\" banking systems with React applications</li><li>Building React applications as micro-frontends in a shell / mini-app architecture</li><li>Contributing to both mini-apps and the shell application</li><li>Tesing of all code using Jest, Testing Library and Playwright</li><li>Improving code quality and solving technical debt using Sonarqube</li><li>Advocating for and promoting self-directed hackathon discovery days</li><li>Mentoring and training developers in React development</li><li>Mentoring and training developers in unit, end-to-end and user interface testing</li></ul>"
                             },
                             {
                                 "title": "Acheivements",
